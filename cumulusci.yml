@@ -1,0 +1,29 @@
+minimum_cumulusci_version: '3.27.0'
+project:
+    name: Refugees-Support
+    package:
+        name: Refugees-Support
+        namespace: Refugees-Support
+        api_version: '50.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/PMM'
+    git:
+        default_branch: ''
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Refugees-Support/tests
+            options:
+                outputdir: robot/Refugees-Support/results
+
+    robot_testdoc:
+        options:
+            path: robot/Refugees-Support/tests
+            output: robot/Refugees-Support/doc/Refugees-Support_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
