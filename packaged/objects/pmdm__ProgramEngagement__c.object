@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Airport_Arrival_Checklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Airport Arrival Checklist</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Alternative_File_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternative File Location</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Constituent_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Constituent Group</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Program Engagements (Constituent Group)</relationshipLabel>
+        <relationshipName>Program_Engagements</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country_of_Birth__c</fullName>
+        <description>Formula - &quot;Birthplace&quot; text field on Cliente</description>
+        <externalId>false</externalId>
+        <formula>pmdm__Contact__r.Birthplace__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Auto-populate based on Primary Applicant (Client)&apos;s &quot;Birthplace&quot; field.</inlineHelpText>
+        <label>Country of Birth</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_of_Residence__c</fullName>
+        <description>Points to Client&apos;s Mailing Address Country</description>
+        <externalId>false</externalId>
+        <formula>pmdm__Contact__r.MailingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Auto-fills based on Primary Applicant&apos;s Mailing Address Country</inlineHelpText>
+        <label>Country of Residence</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_Arrival_Actual__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Arrival (Actual)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Arrival_Expected__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Arrival (Expected)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Document_Checklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Checklist</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Expression_of_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Expression of Interest</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>G_Number__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>G Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_Notes__c</fullName>
+        <description>2020/12/20 MDM - Created to hold various notes from Refugees data that had collapsed various objects into one single column. This field will act as a holding place for data that can be properly transformed into discreet objects in Salesforce as the program staff find disposable time to do so.</description>
+        <externalId>false</externalId>
+        <label>Legacy Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_individuals_on_application__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of individuals on application</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pre_Arrival_Checklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre-Arrival Checklist</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryApplicant__c</fullName>
+        <description>2020/23/10 MDM - Displays Refugees LName in all caps, to comply with IRCC requested format (Refugees Coord. Diane Chua)</description>
+        <externalId>false</externalId>
+        <formula>UPPER( pmdm__Contact__r.LastName )&amp; &quot;, &quot; &amp;  pmdm__Contact__r.FirstName &amp; &quot; &quot; &amp;  pmdm__Contact__r.MiddleName</formula>
+        <label>Primary Applicant</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Refuge_CoSponsor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Co-Sponsor</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Program Engagements (Co-Sponsor 1)</relationshipLabel>
+        <relationshipName>CoSponsorship1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sponsor_2_week_task_list__c</fullName>
+        <externalId>false</externalId>
+        <label>Sponsor 2-week Task List</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Visa_Office__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Visa Office</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Program Engagements (Visa Office)</relationshipLabel>
+        <relationshipName>Visa_Applicants</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Withdrawl_of_sponsorship_application__c</fullName>
+        <externalId>false</externalId>
+        <label>Withdrawl of Sponsorship Application</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+</CustomObject>
