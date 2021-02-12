@@ -35,6 +35,10 @@
                 <behavior>Readonly</behavior>
                 <field>Pickup_Mobile_Phone__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Case_Notes__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
