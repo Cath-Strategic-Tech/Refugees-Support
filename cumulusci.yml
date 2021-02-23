@@ -45,3 +45,9 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+
+flows:
+    dependencies:
+        steps:
+            3:
+                task: add_pmm_engagement_stages
