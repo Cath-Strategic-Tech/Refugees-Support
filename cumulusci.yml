@@ -12,6 +12,25 @@ project:
     source_format: sfdx
 
 tasks:
+    add_pmm_engagement_stages:
+        description: Adds additional picklist vales to the Stage field to support Refugee Support
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: pmdm__Stage__c
+            entries:
+                - fullName: "Inquiry"
+                  label: "Inquiry"
+                - fullName: "Submission of Applications"
+                  label: "Submission of Applications"
+                - fullName: "Application Processing"
+                  label: "Application Processing"
+                - fullName: "Preparing for Arrival"
+                  label: "Preparing for Arrival"
+                - fullName: "Landed - 12 Months"
+                  label: "Landed - 12 Months"
+                - fullName: "Transferred"
+                  label: "Transferred"
+
     robot:
         options:
             suites: robot/Refugees-Support/tests
@@ -26,4 +45,3 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
-
