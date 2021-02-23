@@ -16,7 +16,7 @@ tasks:
         description: Adds additional picklist vales to the Stage field to support Refugee Support
         class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
         options:
-            picklists: pmdm__Stage__c
+            picklists: ProgramEngagement__c.Stage__c
             entries:
                 - fullName: "Inquiry"
                   label: "Inquiry"
