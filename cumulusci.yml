@@ -12,6 +12,7 @@ project:
     source_format: sfdx
 
 tasks:
+
     add_pmm_engagement_stages:
         description: Adds additional picklist vales to the Stage field to support Refugee Support
         class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
