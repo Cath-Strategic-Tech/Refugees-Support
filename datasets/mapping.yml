@@ -1,45 +1,158 @@
-Insert Accounts:
+Insert Account:
   sf_object: Account
-  table: Account
   fields:
-    Name: Name
-    Description: Description
-    BillingStreet: BillingStreet
-    BillingCity: BillingCity
-    BillingState: BillingState
-    BillingPostalCode: BillingPostalCode
-    BillingCountry: BillingCountry
-    ShippingStreet: ShippingStreet
-    ShippingCity: ShippingCity
-    ShippingState: ShippingState
-    ShippingPostalCode: ShippingPostalCode
-    ShippingCountry: ShippingCountry
-    Phone: Phone
-    Fax: Fax
-    Website: Website
-    NumberOfEmployees: NumberOfEmployees
-    AccountNumber: AccountNumber
-    Site: Site
-    Type: Type
-Insert Contacts:
+  - Name
+  lookups:
+    ParentId:
+      table: Account
+      after: Insert Account
+Insert pmdm__Program__c:
+  sf_object: pmdm__Program__c
+  fields:
+  - Name
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__ProgramIssueArea__c
+  - pmdm__ShortSummary__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  - pmdm__TargetPopulation__c
+Insert Contact:
   sf_object: Contact
-  table: Contact
   fields:
-    Salutation: Salutation
-    FirstName: FirstName
-    LastName: LastName
-    Email: Email
-    Phone: Phone
-    MobilePhone: MobilePhone
-    OtherPhone: OtherPhone
-    HomePhone: HomePhone
-    Title: Title
-    Birthdate: Birthdate
-    MailingStreet: MailingStreet
-    MailingCity: MailingCity
-    MailingState: MailingState
-    MailingPostalCode: MailingPostalCode
-    MailingCountry: MailingCountry
+  - Birthplace__c
+  - DoNotCall
+  - FirstName
+  - HasOptedOutOfEmail
+  - HasOptedOutOfFax
+  - LastName
+  - pmdm__IsClient__c
   lookups:
     AccountId:
       table: Account
+    ReportsToId:
+      table: Contact
+      after: Insert Contact
+Insert pmdm__ProgramCohort__c:
+  sf_object: pmdm__ProgramCohort__c
+  fields:
+  - Name
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  lookups:
+    pmdm__Program__c:
+      table: pmdm__Program__c
+Insert pmdm__ProgramEngagement__c:
+  sf_object: pmdm__ProgramEngagement__c
+  fields:
+  - Airport_Arrival_Checklist__c
+  - Alternative_File_Location__c
+  - Date_of_Arrival_Actual__c
+  - Date_of_Arrival_Expected__c
+  - Document_Checklist__c
+  - Expression_of_Interest__c
+  - G_Number__c
+  - Legacy_Notes__c
+  - Name
+  - Number_of_individuals_on_application__c
+  - Pre_Arrival_Checklist__c
+  - RecordTypeId
+  - Sponsor_2_week_task_list__c
+  - Withdrawl_of_sponsorship_application__c
+  - pmdm__ApplicationDate__c
+  - pmdm__AutoName_Override__c
+  - pmdm__EndDate__c
+  - pmdm__Role__c
+  - pmdm__Stage__c
+  - pmdm__StartDate__c
+  lookups:
+    Constituent_Group__c:
+      table: Account
+    Refuge_CoSponsor__c:
+      table: Contact
+    Visa_Office__c:
+      table: Account
+    pmdm__Account__c:
+      table: Account
+    pmdm__Contact__c:
+      table: Contact
+    pmdm__ProgramCohort__c:
+      table: pmdm__ProgramCohort__c
+    pmdm__Program__c:
+      table: pmdm__Program__c
+Insert Milestone__c:
+  sf_object: Milestone__c
+  fields:
+  - Comments__c
+  - Custom_Name__c
+  - Date__c
+  - Event__c
+  - Type__c
+  lookups:
+    Refugee_Sponsorship__c:
+      table: pmdm__ProgramEngagement__c
+Insert Program_Engagement_Role__c:
+  sf_object: Program_Engagement_Role__c
+  fields:
+  - Comments__c
+  - End_Date__c
+  - Role__c
+  - Start_Date__c
+  - Status__c
+  lookups:
+    Contact__c:
+      table: Contact
+    Program_Engagement__c:
+      table: pmdm__ProgramEngagement__c
+Insert Settlement_Plan__c:
+  sf_object: Settlement_Plan__c
+  fields:
+  - Adult_English_Class__c
+  - BC_Services_Card__c
+  - Bank_Statement_Q1__c
+  - Bank_Statement_Q2__c
+  - Bank_Statement_Q3__c
+  - Bank_Statement_Q4__c
+  - Case_Notes__c
+  - Child_Care_Benefits__c
+  - Confirmation_of_PR__c
+  - Date_Time_Arriving__c
+  - Flight_Number__c
+  - Interim_Federal_Health_IFH__c
+  - Lease_Agreement__c
+  - Medical_Services_Plan_MSP__c
+  - New_Arrival_Orientation__c
+  - Notes__c
+  - Number_of_Individuals_Arriving__c
+  - Orientation_Date_Time__c
+  - PR_Card__c
+  - School_Registration__c
+  - Social_Insurance_Number_SIN__c
+  lookups:
+    Designated_Pickup__c:
+      table: Contact
+    Initial_Housing_Host__c:
+      table: Account
+    Program_Engagement__c:
+      table: pmdm__ProgramEngagement__c
+Insert Sponsorship_Requirement__c:
+  sf_object: Sponsorship_Requirement__c
+  fields:
+  - Comments__c
+  - Completed_Date__c
+  - Completed__c
+  - Date_Received_RCAV__c
+  - Date_Sent_submitted__c
+  - Date_Signed__c
+  - Date_received_by_Government__c
+  - Description_of_Requirement__c
+  - Document__c
+  - Status__c
+  - Type__c
+  lookups:
+    Assigned__c:
+      table: Contact
+    Program_Engagement__c:
+      table: pmdm__ProgramEngagement__c
