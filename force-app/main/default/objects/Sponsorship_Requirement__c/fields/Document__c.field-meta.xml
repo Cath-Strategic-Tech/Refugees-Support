@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document__c</fullName>
+    <externalId>false</externalId>
+    <label>Document</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IMM0008 - Generic Application</fullName>
+                <default>false</default>
+                <label>IMM0008 - Generic Application</label>
+            </value>
+            <value>
+                <fullName>IMM0008 Schedule 2</fullName>
+                <default>false</default>
+                <label>IMM0008 Schedule 2</label>
+            </value>
+            <value>
+                <fullName>Schedule A</fullName>
+                <default>false</default>
+                <label>Schedule A</label>
+            </value>
+            <value>
+                <fullName>Representtaive Form</fullName>
+                <default>false</default>
+                <label>Representtaive Form</label>
+            </value>
+            <value>
+                <fullName>Photos</fullName>
+                <default>false</default>
+                <label>Photos</label>
+            </value>
+            <value>
+                <fullName>Refugee Story</fullName>
+                <default>false</default>
+                <label>Refugee Story</label>
+            </value>
+            <value>
+                <fullName>Documents (various)- UNHCR, RDS, Passports, Birth cert, Marriage, etc.</fullName>
+                <default>false</default>
+                <label>Documents (various)- UNHCR, RDS, Passports, Birth cert, Marriage, etc.</label>
+            </value>
+            <value>
+                <fullName>IMM5373 - Undertaking to sponsor</fullName>
+                <default>false</default>
+                <label>IMM5373 - Undertaking to sponsor</label>
+            </value>
+            <value>
+                <fullName>Sponsor Assessment</fullName>
+                <default>false</default>
+                <label>Sponsor Assessment</label>
+            </value>
+            <value>
+                <fullName>In Trust Bank Account</fullName>
+                <default>false</default>
+                <label>In Trust Bank Account</label>
+            </value>
+            <value>
+                <fullName>Settlement plan</fullName>
+                <default>false</default>
+                <label>Settlement plan</label>
+            </value>
+            <value>
+                <fullName>Budget/Support Calculation</fullName>
+                <default>false</default>
+                <label>Budget/Support Calculation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

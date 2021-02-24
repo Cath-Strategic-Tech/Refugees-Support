@@ -13,6 +13,25 @@ project:
 
 tasks:
 
+    add_pmm_engagement_stages:
+        description: Adds additional picklist vales to the Stage field to support Refugee Support
+        class_path: cumulusci.tasks.metadata_etl.picklists.AddPicklistEntries
+        options:
+            picklists: pmdm__ProgramEngagement__c.pmdm__Stage__c
+            entries:
+                - fullName: "Inquiry"
+                  label: "Inquiry"
+                - fullName: "Submission of Applications"
+                  label: "Submission of Applications"
+                - fullName: "Application Processing"
+                  label: "Application Processing"
+                - fullName: "Preparing for Arrival"
+                  label: "Preparing for Arrival"
+                - fullName: "Landed - 12 Months"
+                  label: "Landed - 12 Months"
+                - fullName: "Transferred"
+                  label: "Transferred"
+
     list_changes:
         name: List Changes from Scratch Org
         description: List the changes from a scratch org
@@ -43,8 +62,47 @@ tasks:
             required_org_code_coverage_percent: 75
 
     update_admin_profile:
-        # description: Retrieves, edits, and redeploys the System Administrator profile with full FLS perms for all objects/fields. Also sets record type visibilities.
+        class_path: cumulusci.tasks.salesforce.UpdateAdminProfile
         options:
             record_types:
-                - record_type: "pmdm__ProgramEngagement__c.Refugee_Support"
+                - record_type: pmdm__ProgramEngagement__c.Refugee_Support
                   default: true
+
+    load_dataset:
+        options:
+            sql_path: datasets/sf-sample.sql
+    
+
+
+flows:
+    dependencies:
+        steps:
+            3:
+                task: add_pmm_engagement_stages
+
+    config_dev:
+        steps:
+            3:
+                task: load_dataset
+    
+    config_qa:
+        steps:
+            3:
+                task: load_dataset 
+
+    delete_data:
+        steps:
+            1:
+                task: delete_data
+                options:
+                    objects:
+                        - pmdm__ServiceDelivery__c
+                        - pmdm__ProgramEngagement__c
+                        - pmdm__ProgramCohort__c
+                        - pmdm__ServiceParticipant__c
+                        - pmdm__ServiceSession__c
+                        - pmdm__ServiceSchedule__c
+                        - pmdm__Service__c
+                        - pmdm__Program__c
+                        - Contact
+                        - Account

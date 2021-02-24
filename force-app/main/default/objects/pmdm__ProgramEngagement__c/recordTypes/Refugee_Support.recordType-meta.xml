@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refugee_Support</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Refugee_Compact_Layout</compactLayoutAssignment>
+    <description>For tracking individual and family applicants to the Canadian refugee immigration program.</description>
+    <label>Refugee Support</label>
+    <picklistValues>
+        <picklist>pmdm__Role__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>pmdm__Stage__c</picklist>
+        <values>
+            <fullName>Application Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inquiry</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Landed - 12 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preparing for Arrival</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submission of Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
