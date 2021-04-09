@@ -37,14 +37,14 @@ tasks:
         description: List the changes from a scratch org
         class_path: cumulusci.tasks.salesforce.sourcetracking.ListChanges
         options:
-            exclude: "Profile, PicklistValue, StandardValueSet, CustomObject"
+            exclude: "Profile, PicklistValue, StandardValueSet"
 
     retrieve_changes:
         name: Retrieve Changes from Scratch Org
         description: Retrieve changed components from a scratch org
         class_path: cumulusci.tasks.salesforce.sourcetracking.RetrieveChanges
         options:
-            exclude: "Profile, PicklistValue, StandardValueSet, CustomObject"
+            exclude: "Profile, PicklistValue, StandardValueSet"
 
     robot:
         options:

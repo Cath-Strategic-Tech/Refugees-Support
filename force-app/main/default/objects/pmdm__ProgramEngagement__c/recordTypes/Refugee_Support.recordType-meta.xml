@@ -15,6 +15,10 @@
     <picklistValues>
         <picklist>pmdm__Stage__c</picklist>
         <values>
+            <fullName>Application Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Application Processing</fullName>
             <default>false</default>
         </values>
