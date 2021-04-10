@@ -3,7 +3,7 @@ project:
     name: Refugees-Support
     package:
         name: Refugees-Support
-        namespace: Refugees-Support
+        namespace: refugee01
         api_version: '50.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/PMM'
