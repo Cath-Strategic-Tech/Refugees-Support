@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>pmdm__ProgramEngagement__c</entityName>
+    <fieldName>pmdm__Stage__c</fieldName>
+    <masterLabel>Refugees Support Path</masterLabel>
+    <recordTypeName>Refugee_Support</recordTypeName>
+</PathAssistant>
