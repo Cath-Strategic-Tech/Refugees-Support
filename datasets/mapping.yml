@@ -93,19 +93,6 @@ Insert Milestone__c:
   lookups:
     Refugee_Sponsorship__c:
       table: pmdm__ProgramEngagement__c
-Insert Program_Engagement_Role__c:
-  sf_object: Program_Engagement_Role__c
-  fields:
-  - Comments__c
-  - End_Date__c
-  - Role__c
-  - Start_Date__c
-  - Status__c
-  lookups:
-    Contact__c:
-      table: Contact
-    Program_Engagement__c:
-      table: pmdm__ProgramEngagement__c
 Insert Settlement_Plan__c:
   sf_object: Settlement_Plan__c
   fields:
