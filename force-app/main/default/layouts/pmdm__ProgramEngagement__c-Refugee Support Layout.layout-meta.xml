@@ -123,6 +123,7 @@
                 <behavior>Readonly</behavior>
                 <field>Total_Support_Required__c</field>
             </layoutItems>
+        </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
