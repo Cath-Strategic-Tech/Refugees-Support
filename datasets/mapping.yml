@@ -49,8 +49,6 @@ Insert pmdm__ProgramEngagement__c:
   fields:
   - Airport_Arrival_Checklist__c
   - Alternative_File_Location__c
-  - Date_of_Arrival_Actual__c
-  - Date_of_Arrival_Expected__c
   - Document_Checklist__c
   - Expression_of_Interest__c
   - G_Number__c
