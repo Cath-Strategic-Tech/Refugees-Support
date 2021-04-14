@@ -8,7 +8,7 @@ on:
 env:
     CUMULUSCI_KEYCHAIN_CLASS: cumulusci.core.keychain.EnvironmentProjectKeychain
     CUMULUSCI_SERVICE_github: ${{ secrets.CUMULUSCI_SERVICE_github }}
-    CUMULUSCI_ORG_packaging: '{"username": "mmartin.chan2@cts.org ", "instance_url": "https://romancatholicarchdioceseof2-dev-ed.lightning.force.com/"}'
+    CUMULUSCI_ORG_packaging: '{"username": "mmartin@rcav.org.refuge ", "instance_url": "https://rcav-dev-ed.lightning.force.com//"}'
     SFDX_CLIENT_ID: ${{ secrets.SFDX_CLIENT_ID }}
     SFDX_HUB_KEY: ${{ secrets.SFDX_HUB_KEY }}
 jobs:
