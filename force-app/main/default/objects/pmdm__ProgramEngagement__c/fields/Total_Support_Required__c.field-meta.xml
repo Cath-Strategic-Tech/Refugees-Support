@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Support_Required__c</fullName>
+    <description>2021-04-13 MDM: Total financial support required to settle a family (sum of Start-Up Costs and Monthly RAP rates x 12 months.)</description>
+    <externalId>false</externalId>
+    <formula>Start_Up_Costs__c + ( Monthly_RAP_Rate__c * 12)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total financial support required to settle a family (sum of Start-Up Costs and Monthly RAP rates x 12 months.)</inlineHelpText>
+    <label>Total Support Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
