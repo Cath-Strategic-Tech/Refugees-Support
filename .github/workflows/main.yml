@@ -13,7 +13,7 @@ env:
     SFDX_HUB_KEY: ${{ secrets.SFDX_HUB_KEY }}
 jobs:
   deploy_packaging:
-    name: "Deploy to Packaging"
+    name: "Deploy to Packaging" 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
