@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <members>Account</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>Contract</members>
+        <members>Opportunity</members>
+        <members>Milestone__c</members>
+        <members>pmdm__ProgramEngagement__c</members>
+        <members>Settlement_Plan__c</members>
+        <members>Sponsorship_Requirement__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <version>46.0</version>
+</Package>
