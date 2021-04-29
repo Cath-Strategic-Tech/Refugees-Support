@@ -64,9 +64,7 @@ tasks:
     update_admin_profile:
         class_path: cumulusci.tasks.salesforce.UpdateAdminProfile
         options:
-            record_types:
-                - record_type: pmdm__ProgramEngagement__c.Refugee_Support
-                  default: true
+            package_xml: lib/admin_profile.xml
 
     uninstall_packaged_incremental:
         description: Deletes any metadata from the package in the target org not in the local workspace
