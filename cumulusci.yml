@@ -6,6 +6,7 @@ project:
         namespace: refugee01
         api_version: '50.0'
     dependencies:
+        - github: 'https://github.com/SalesforceFoundation/Households'
         - github: 'https://github.com/SalesforceFoundation/PMM'
     git:
         default_branch: ''
