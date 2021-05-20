@@ -6,6 +6,5 @@
     <fields>G_Number__c</fields>
     <fields>Visa_Office__c</fields>
     <fields>pmdm__Stage__c</fields>
-    <fields>Country_of_Birth__c</fields>
     <label>Refugee Compact Layout</label>
 </CompactLayout>
