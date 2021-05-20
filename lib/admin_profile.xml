@@ -7,10 +7,7 @@
         <members>Contact</members>
         <members>Contract</members>
         <members>Opportunity</members>
-        <members>Milestone__c</members>
         <members>pmdm__ProgramEngagement__c</members>
-        <members>Settlement_Plan__c</members>
-        <members>Sponsorship_Requirement__c</members>
         <name>CustomObject</name>
     </types>
     <types>
