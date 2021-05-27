@@ -113,6 +113,7 @@ flows:
                 task: load_dataset
     
     config_qa:
+        steps:
             3:
                 task: update_admin_profile_record_types
             4:
