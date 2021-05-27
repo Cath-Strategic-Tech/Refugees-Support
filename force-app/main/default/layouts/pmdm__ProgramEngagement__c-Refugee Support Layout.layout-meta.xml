@@ -8,7 +8,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>PrimaryApplicant__c</field>
+                <field>PrincipalApplicant__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -28,7 +28,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>pmdm__ProgramCohort__c</field>
+                <field>Program_Engagement_Group__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
@@ -42,6 +42,10 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>pmdm__Program__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>pmdm__ProgramCohort__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -74,7 +78,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Alternative_File_Location__c</field>
+                <field>Paper_File_Location__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -246,7 +250,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1g000002Fvxt</masterLabel>
+        <masterLabel>00h5400000416hC</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
