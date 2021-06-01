@@ -96,6 +96,7 @@ tasks:
     load_dataset:
         options:
             sql_path: datasets/sf-sample.sql
+            drop_missing_schema: "true"
     
 
 
