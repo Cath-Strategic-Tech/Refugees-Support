@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UCI__c</fullName>
+    <description>Unique client identifier, given by the government of Canada to individuals applying for permits, residency, and citizenship.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Unique client identifier, given by the government of Canada to individuals applying for permits, residency, and citizenship.</inlineHelpText>
+    <label>UCI</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
