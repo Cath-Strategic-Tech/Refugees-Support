@@ -96,6 +96,7 @@ tasks:
     load_dataset:
         options:
             sql_path: datasets/sf-sample.sql
+            drop_missing_schema: "true"
     
 
 
@@ -113,6 +114,7 @@ flows:
                 task: load_dataset
     
     config_qa:
+        steps:
             3:
                 task: update_admin_profile_record_types
             4:

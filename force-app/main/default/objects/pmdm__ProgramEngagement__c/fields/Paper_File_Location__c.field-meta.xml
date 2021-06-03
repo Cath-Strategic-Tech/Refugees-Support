@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Document_Checklist__c</fullName>
+    <fullName>Paper_File_Location__c</fullName>
     <externalId>false</externalId>
-    <label>Document Checklist</label>
+    <label>Paper File Location</label>
+    <length>50</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
-    <type>Url</type>
+    <type>Text</type>
+    <unique>false</unique>
 </CustomField>
