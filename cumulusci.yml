@@ -128,11 +128,9 @@ flows:
                     objects:
                         - pmdm__ServiceDelivery__c
                         - pmdm__ProgramEngagement__c
-                        - pmdm__ProgramCohort__c
                         - pmdm__ServiceParticipant__c
                         - pmdm__ServiceSession__c
                         - pmdm__ServiceSchedule__c
                         - pmdm__Service__c
-                        - pmdm__Program__c
                         - Contact
                         - Account
