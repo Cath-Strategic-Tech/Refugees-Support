@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Contact1_Birth_City_Province__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact1 Birth City, Province</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact1_Country_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact1 Country of Birth</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact1_Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact1 Gender</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact1_HomeParish__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact1 Home Parish</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>NPSP Data Imports (Contact1 Home Parish)</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact1_UCI__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact1 UCI</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact2_Birth_City_Province__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact2 Birth City, Province</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact2_Country_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact2 Country of Birth</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact2_Gender__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact2 Gender</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact2_HomeParish__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact2 Home Parish</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>NPSP Data Imports (Contact2 Home Parish)</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact2_UCI__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact2 UCI</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ProgEng Client</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>NPSP Data Imports (ProgEng Client)</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProgEng_ConstituentGroup__c</fullName>
+        <description>Refugees-related</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refugees-related</inlineHelpText>
+        <label>ProgEng ConstituentGroup</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Govt_Appl__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Govt Appl #</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Household__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ProgEng Household</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>NPSP Data Imports (ProgEng Household)</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports_Household</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Import_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Import Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Imported__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ProgEng Imported</label>
+        <referenceTo>pmdm__ProgramEngagement__c</referenceTo>
+        <relationshipLabel>NPSP Data Imports</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Legacy_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Legacy Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Program_Cohort__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ProgEng Program Cohort</label>
+        <referenceTo>pmdm__ProgramCohort__c</referenceTo>
+        <relationshipLabel>NPSP Data Imports</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ProgEng Program</label>
+        <referenceTo>pmdm__Program__c</referenceTo>
+        <relationshipLabel>NPSP Data Imports</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Record_Type_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Record Type ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Member</fullName>
+                    <default>false</default>
+                    <label>Member</label>
+                </value>
+                <value>
+                    <fullName>Client</fullName>
+                    <default>false</default>
+                    <label>Client</label>
+                </value>
+                <value>
+                    <fullName>Volunteer</fullName>
+                    <default>false</default>
+                    <label>Volunteer</label>
+                </value>
+                <value>
+                    <fullName>Service Provider</fullName>
+                    <default>false</default>
+                    <label>Service Provider</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Applied</fullName>
+                    <default>false</default>
+                    <label>Applied</label>
+                </value>
+                <value>
+                    <fullName>Application Denied</fullName>
+                    <default>false</default>
+                    <label>Application Denied</label>
+                </value>
+                <value>
+                    <fullName>Enrolled</fullName>
+                    <default>false</default>
+                    <label>Enrolled</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                    <label>Withdrawn</label>
+                </value>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Active Member</fullName>
+                    <default>false</default>
+                    <label>Active Member</label>
+                </value>
+                <value>
+                    <fullName>Leader</fullName>
+                    <default>false</default>
+                    <label>Leader</label>
+                </value>
+                <value>
+                    <fullName>Mentor</fullName>
+                    <default>false</default>
+                    <label>Mentor</label>
+                </value>
+                <value>
+                    <fullName>Manager</fullName>
+                    <default>false</default>
+                    <label>Manager</label>
+                </value>
+                <value>
+                    <fullName>Member</fullName>
+                    <default>false</default>
+                    <label>Member</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProgEng_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>ProgEng Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Prog_Visa_Office__c</fullName>
+        <description>refugees</description>
+        <externalId>false</externalId>
+        <inlineHelpText>refugees</inlineHelpText>
+        <label>Prog Visa Office</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Relationship_1_Import_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Relationship 1 Import Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Relationship_1_Imported__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Relationship 1 Imported</label>
+        <referenceTo>npe4__Relationship__c</referenceTo>
+        <relationshipLabel>NPSP Data Imports</relationshipLabel>
+        <relationshipName>NPSP_Data_Imports</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Relationship_1_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Relationship 1 Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

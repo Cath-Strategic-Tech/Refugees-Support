@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refugees_NPSPDataLoader</fullName>
+    <types>
+        <members>npsp__DataImport__c.Contact1_Birth_City_Province__c</members>
+        <members>npsp__DataImport__c.Contact1_Country_of_Birth__c</members>
+        <members>npsp__DataImport__c.Contact1_Gender__c</members>
+        <members>npsp__DataImport__c.Contact1_HomeParish__c</members>
+        <members>npsp__DataImport__c.Contact1_UCI__c</members>
+        <members>npsp__DataImport__c.Contact2_Birth_City_Province__c</members>
+        <members>npsp__DataImport__c.Contact2_Country_of_Birth__c</members>
+        <members>npsp__DataImport__c.Contact2_Gender__c</members>
+        <members>npsp__DataImport__c.Contact2_HomeParish__c</members>
+        <members>npsp__DataImport__c.Contact2_UCI__c</members>
+        <members>npsp__DataImport__c.ProgEng_Client__c</members>
+        <members>npsp__DataImport__c.ProgEng_ConstituentGroup__c</members>
+        <members>npsp__DataImport__c.ProgEng_Govt_Appl__c</members>
+        <members>npsp__DataImport__c.ProgEng_Household__c</members>
+        <members>npsp__DataImport__c.ProgEng_Import_Status__c</members>
+        <members>npsp__DataImport__c.ProgEng_Imported__c</members>
+        <members>npsp__DataImport__c.ProgEng_Legacy_Notes__c</members>
+        <members>npsp__DataImport__c.ProgEng_Program_Cohort__c</members>
+        <members>npsp__DataImport__c.ProgEng_Program__c</members>
+        <members>npsp__DataImport__c.ProgEng_Record_Type_ID__c</members>
+        <members>npsp__DataImport__c.ProgEng_Role__c</members>
+        <members>npsp__DataImport__c.ProgEng_Stage__c</members>
+        <members>npsp__DataImport__c.ProgEng_Start_Date__c</members>
+        <members>npsp__DataImport__c.Prog_Visa_Office__c</members>
+        <members>npsp__DataImport__c.Relationship_1_Import_Status__c</members>
+        <members>npsp__DataImport__c.Relationship_1_Imported__c</members>
+        <members>npsp__DataImport__c.Relationship_1_Type__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>51.0</version>
+</Package>
