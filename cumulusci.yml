@@ -33,6 +33,12 @@ tasks:
                 - fullName: "Transferred"
                   label: "Transferred"
 
+    deploy_npspdataloader_fields:
+        description: Deploy custom NPSP Data Loader fields
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/npspdataloader
+
     list_changes:
         name: List Changes from Scratch Org
         description: List the changes from a scratch org
