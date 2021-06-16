@@ -1,0 +1,2072 @@
+Insert CalendlyAction__c:
+  sf_object: CalendlyAction__c
+  fields:
+  - CustomQuestion1__c
+  - CustomQuestion2__c
+  - CustomQuestion3__c
+  - CustomQuestion4__c
+  - CustomResponse1__c
+  - CustomResponse2__c
+  - CustomResponse3__c
+  - CustomResponse4__c
+  - EventCancelReason__c
+  - EventCanceled__c
+  - EventCancelerName__c
+  - EventCreatedAt__c
+  - EventDescription__c
+  - EventEndTime__c
+  - EventPrimaryPublisherEmail__c
+  - EventPrimaryPublisherName__c
+  - EventStartTime__c
+  - EventSubject__c
+  - EventTypeDuration__c
+  - EventTypeKind__c
+  - EventTypeName__c
+  - EventTypeSlug__c
+  - EventUuid__c
+  - InviteeCancelReason__c
+  - InviteeCanceledAt__c
+  - InviteeCanceled__c
+  - InviteeCancelerName__c
+  - InviteeCreatedAt__c
+  - InviteeEmail__c
+  - InviteeFirstName__c
+  - InviteeLastName__c
+  - InviteeName__c
+  - InviteeTimezone__c
+  - InviteeUuid__c
+  - Location__c
+  - Name
+  - ObjectId__c
+  - UtmCampaign__c
+  - UtmContent__c
+  - UtmMedium__c
+  - UtmSource__c
+  - UtmTerm__c
+Insert Cohort__c:
+  sf_object: Cohort__c
+  fields:
+  - Active__c
+  - Cohort_Type__c
+  - Description__c
+  - Name
+Insert Component__c:
+  sf_object: Component__c
+  fields:
+  - API_Name__c
+  - Field_Type__c
+  - Formula_Data_Type__c
+  - Name
+  - Object__c
+  - Type__c
+Insert Deanery__c:
+  sf_object: Deanery__c
+  fields:
+  - Description__c
+  - Name
+Insert Graphics_Pack_Example__c:
+  sf_object: Graphics_Pack_Example__c
+  fields:
+  - First_3_positions__c
+  - Out_of_3_rating__c
+  - Out_of_5_rating__c
+  - Red_Amber_Green__c
+  - Up_or_Down__c
+Insert IATSPayment__IATS_Account__c:
+  sf_object: IATSPayment__IATS_Account__c
+  fields:
+  - IATSPayment__Active__c
+  - IATSPayment__Client_Code__c
+  - IATSPayment__Currency__c
+  - IATSPayment__Description__c
+  - IATSPayment__Direct_Debit_Processor__c
+  - IATSPayment__Do_Not_Include_in_Journal_Download__c
+  - IATSPayment__IATS_System__c
+  - IATSPayment__Password__c
+  - IATSPayment__Primary__c
+  - Name
+Insert Release__c:
+  sf_object: Release__c
+  fields:
+  - Description__c
+  - Release_Date__c
+  - Release_Type__c
+  - Status__c
+  - Test_Classes__c
+Insert kell6_core__Receipt_Template_Assignment__c:
+  sf_object: kell6_core__Receipt_Template_Assignment__c
+  fields:
+  - kell6_core__Email_From_Reply_To__c
+  - kell6_core__Email_Sender_Name__c
+  - kell6_core__Email_Template_Name__c
+  - kell6_core__Filter_Logic__c
+  - kell6_core__Organization_Wide_Email_Address__c
+  - kell6_core__Priority2__c
+  - kell6_core__Priority__c
+  - kell6_core__Receipt_Numbering_Name__c
+  - kell6_core__Receipt_Template_Name__c
+  - kell6_core__Type__c
+Insert npo02__Household__c:
+  sf_object: npo02__Household__c
+  fields:
+  - Name
+  - npo02__Addressee__c
+  - npo02__Always_Anonymous__c
+  - npo02__AverageAmount__c
+  - npo02__Best_Gift_Year_Total__c
+  - npo02__Best_Gift_Year__c
+  - npo02__FirstCloseDate__c
+  - npo02__Formal_Greeting__c
+  - npo02__HouseholdEmail__c
+  - npo02__HouseholdPhone__c
+  - npo02__Household_ID__c
+  - npo02__Informal_Greeting__c
+  - npo02__LargestAmount__c
+  - npo02__LastCloseDate__c
+  - npo02__LastMembershipAmount__c
+  - npo02__LastMembershipDate__c
+  - npo02__LastMembershipLevel__c
+  - npo02__LastMembershipOrigin__c
+  - npo02__LastOppAmount__c
+  - npo02__MailingCity__c
+  - npo02__MailingCountry__c
+  - npo02__MailingPostalCode__c
+  - npo02__MailingState__c
+  - npo02__MailingStreet__c
+  - npo02__MembershipEndDate__c
+  - npo02__MembershipJoinDate__c
+  - npo02__NumberOfClosedOpps__c
+  - npo02__NumberOfMembershipOpps__c
+  - npo02__OppAmount2YearsAgo__c
+  - npo02__OppAmountLastNDays__c
+  - npo02__OppAmountLastYear__c
+  - npo02__OppAmountThisYear__c
+  - npo02__OppsClosed2YearsAgo__c
+  - npo02__OppsClosedLastNDays__c
+  - npo02__OppsClosedLastYear__c
+  - npo02__OppsClosedThisYear__c
+  - npo02__SYSTEM_CUSTOM_NAMING__c
+  - npo02__SmallestAmount__c
+  - npo02__TotalMembershipOppAmount__c
+  - npo02__TotalOppAmount__c
+  - npsp__Number_of_Household_Members__c
+Insert npsp__Batch__c:
+  sf_object: npsp__Batch__c
+  fields:
+  - Name
+  - npsp__Batch_Status__c
+  - npsp__Description__c
+  - npsp__Number_of_Items__c
+  - npsp__Object_Name__c
+Insert npsp__Engagement_Plan_Template__c:
+  sf_object: npsp__Engagement_Plan_Template__c
+  fields:
+  - Name
+  - npsp__Automatically_Update_Child_Task_Due_Date__c
+  - npsp__Default_Assignee__c
+  - npsp__Description__c
+  - npsp__Reschedule_To__c
+  - npsp__Skip_Weekends__c
+Insert npsp__Form_Template__c:
+  sf_object: npsp__Form_Template__c
+  fields:
+  - Name
+  - npsp__Description__c
+  - npsp__Format_Version__c
+  - npsp__Template_JSON__c
+Insert pmdm__Program__c:
+  sf_object: pmdm__Program__c
+  fields:
+  - Department__c
+  - Name
+  - RecordTypeId
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__ProgramIssueArea__c
+  - pmdm__ShortSummary__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  - pmdm__TargetPopulation__c
+Insert Lead:
+  sf_object: Lead
+  fields:
+  - CalendlyCreated__c
+  - Company
+  - FirstName
+  - GW_Volunteers__Volunteer_Availability__c
+  - GW_Volunteers__Volunteer_Notes__c
+  - GW_Volunteers__Volunteer_Skills__c
+  - GW_Volunteers__Volunteer_Status__c
+  - IsConverted
+  - IsUnreadByOwner
+  - LastName
+  - Status
+  - dupcheck__dc3DisableDuplicateCheck__c
+  - dupcheck__dc3Index__c
+  - dupcheck__dc3Web2Lead__c
+  - npe01__Preferred_Email__c
+  - npe01__Preferred_Phone__c
+  - npsp__CompanyCity__c
+  - npsp__CompanyCountry__c
+  - npsp__CompanyPostalCode__c
+  - npsp__CompanyState__c
+  - npsp__CompanyStreet__c
+  - pi__Needs_Score_Synced__c
+  - pi__Pardot_Last_Scored_At__c
+  - pi__campaign__c
+  - pi__comments__c
+  - pi__conversion_date__c
+  - pi__conversion_object_name__c
+  - pi__conversion_object_type__c
+  - pi__created_date__c
+  - pi__first_activity__c
+  - pi__first_search_term__c
+  - pi__first_search_type__c
+  - pi__first_touch_url__c
+  - pi__grade__c
+  - pi__last_activity__c
+  - pi__notes__c
+  - pi__pardot_hard_bounced__c
+  - pi__score__c
+  - pi__url__c
+  - pi__utm_campaign__c
+  - pi__utm_content__c
+  - pi__utm_medium__c
+  - pi__utm_source__c
+  - pi__utm_term__c
+  lookups:
+    npsp__Batch__c:
+      table: npsp__Batch__c
+Insert npsp__DataImportBatch__c:
+  sf_object: npsp__DataImportBatch__c
+  fields:
+  - Name
+  - npsp__Account_Custom_Unique_ID__c
+  - npsp__Active_Fields__c
+  - npsp__Batch_Defaults__c
+  - npsp__Batch_Description__c
+  - npsp__Batch_Gift_Entry_Version__c
+  - npsp__Batch_Number__c
+  - npsp__Batch_Process_Size__c
+  - npsp__Batch_Status__c
+  - npsp__Batch_Table_Columns__c
+  - npsp__Contact_Custom_Unique_ID__c
+  - npsp__Contact_Matching_Rule__c
+  - npsp__Donation_Date_Range__c
+  - npsp__Donation_Matching_Behavior__c
+  - npsp__Donation_Matching_Implementing_Class__c
+  - npsp__Donation_Matching_Rule__c
+  - npsp__Expected_Count_of_Gifts__c
+  - npsp__Expected_Total_Batch_Amount__c
+  - npsp__GiftBatch__c
+  - npsp__Last_Processed_On__c
+  - npsp__Post_Process_Implementing_Class__c
+  - npsp__Process_Using_Scheduled_Job__c
+  - npsp__Records_Failed__c
+  - npsp__Records_Successfully_Processed__c
+  - npsp__RequireTotalMatch__c
+  - npsp__Run_Opportunity_Rollups_while_Processing__c
+  lookups:
+    npsp__Form_Template__c:
+      table: npsp__Form_Template__c
+Insert npsp__Level__c:
+  sf_object: npsp__Level__c
+  fields:
+  - Name
+  - npsp__Active__c
+  - npsp__Description__c
+  - npsp__Level_Field__c
+  - npsp__Maximum_Amount__c
+  - npsp__Minimum_Amount__c
+  - npsp__Previous_Level_Field__c
+  - npsp__Source_Field__c
+  - npsp__Target__c
+  lookups:
+    npsp__Engagement_Plan_Template__c:
+      table: npsp__Engagement_Plan_Template__c
+Insert pmdm__ProgramCohort__c:
+  sf_object: pmdm__ProgramCohort__c
+  fields:
+  - Name
+  - pmdm__Description__c
+  - pmdm__EndDate__c
+  - pmdm__StartDate__c
+  - pmdm__Status__c
+  lookups:
+    pmdm__Program__c:
+      table: pmdm__Program__c
+Insert pmdm__Service__c:
+  sf_object: pmdm__Service__c
+  fields:
+  - Billable__c
+  - Name
+  - Rate_of_Compentation__c
+  - pmdm__Description__c
+  - pmdm__Status__c
+  - pmdm__UnitOfMeasurement__c
+  lookups:
+    pmdm__Program__c:
+      table: pmdm__Program__c
+Insert Account:
+  sf_object: Account
+  fields:
+  - ABP_Miller_Greeting__c
+  - Abbreviation__c
+  - Active__c
+  - Active_in_diocese__c
+  - Billing_Address_Complete__c
+  - Country_of_origin__c
+  - Date_Dissolved__c
+  - Date_Established__c
+  - Date_of_Dedication__c
+  - Email_Opt_Out__c
+  - Email__c
+  - Entrustment_End_Date__c
+  - Entrustment_Is_Formal__c
+  - Entrustment_Notes__c
+  - Entrustment_Start_Date__c
+  - Financial_Report_Password__c
+  - Flag_for_Review__c
+  - Giving_Score__c
+  - Goals_Objectives__c
+  - Legacy_CID__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Meeting_Location__c
+  - Name
+  - Order_is_local__c
+  - Parish_Census__c
+  - Parish_Code__c
+  - Part_time_Stipended__c
+  - Photo__c
+  - Receipt_Type__c
+  - RecordTypeId
+  - Registered_Families__c
+  - Religious_Suffix__c
+  - Sub_Type__c
+  - Target_Audience__c
+  - Tax_Receipt_Email_Opt_In__c
+  - Type_Members__c
+  - Type_of_Ministry__c
+  - Volunteers__c
+  - Web_Facebook__c
+  - Web_Instagram__c
+  - dupcheck__dc3DisableDuplicateCheck__c
+  - dupcheck__dc3Index__c
+  - isCorporate__c
+  - isEstate__c
+  - isNonProfit__c
+  - npe01__SYSTEMIsIndividual__c
+  - npe01__SYSTEM_AccountType__c
+  - npo02__AverageAmount__c
+  - npo02__Best_Gift_Year_Total__c
+  - npo02__Best_Gift_Year__c
+  - npo02__FirstCloseDate__c
+  - npo02__Formal_Greeting__c
+  - npo02__HouseholdPhone__c
+  - npo02__Informal_Greeting__c
+  - npo02__LargestAmount__c
+  - npo02__LastCloseDate__c
+  - npo02__LastMembershipAmount__c
+  - npo02__LastMembershipDate__c
+  - npo02__LastMembershipLevel__c
+  - npo02__LastMembershipOrigin__c
+  - npo02__LastOppAmount__c
+  - npo02__MembershipEndDate__c
+  - npo02__MembershipJoinDate__c
+  - npo02__NumberOfClosedOpps__c
+  - npo02__NumberOfMembershipOpps__c
+  - npo02__OppAmount2YearsAgo__c
+  - npo02__OppAmountLastNDays__c
+  - npo02__OppAmountLastYear__c
+  - npo02__OppAmountThisYear__c
+  - npo02__OppsClosed2YearsAgo__c
+  - npo02__OppsClosedLastNDays__c
+  - npo02__OppsClosedLastYear__c
+  - npo02__OppsClosedThisYear__c
+  - npo02__SYSTEM_CUSTOM_NAMING__c
+  - npo02__SmallestAmount__c
+  - npo02__TotalMembershipOppAmount__c
+  - npo02__TotalOppAmount__c
+  - npsp__Funding_Focus__c
+  - npsp__Grantmaker__c
+  - npsp__Matching_Gift_Administrator_Name__c
+  - npsp__Matching_Gift_Amount_Max__c
+  - npsp__Matching_Gift_Amount_Min__c
+  - npsp__Matching_Gift_Annual_Employee_Max__c
+  - npsp__Matching_Gift_Comments__c
+  - npsp__Matching_Gift_Company__c
+  - npsp__Matching_Gift_Email__c
+  - npsp__Matching_Gift_Info_Updated__c
+  - npsp__Matching_Gift_Percent__c
+  - npsp__Matching_Gift_Phone__c
+  - npsp__Matching_Gift_Request_Deadline__c
+  - npsp__Number_of_Household_Members__c
+  - zDeanery__c
+  lookups:
+    Congregation_Superior__c:
+      table: Contact
+      after: Insert Contact
+    Deanery__c:
+      table: Account
+      after: Insert Account
+    Diocese__c:
+      table: Account
+      after: Insert Account
+    Entrustment__c:
+      table: Account
+      after: Insert Account
+    Level__c:
+      table: npsp__Level__c
+    ParentId:
+      table: Account
+      after: Insert Account
+    Previous_Level__c:
+      table: npsp__Level__c
+    Related_Elementary_School__c:
+      table: Account
+      after: Insert Account
+    Superior_s_Office__c:
+      table: npsp__Address__c
+      after: Insert npsp__Address__c
+    npe01__One2OneContact__c:
+      table: Contact
+      after: Insert Contact
+    npsp__Batch__c:
+      table: npsp__Batch__c
+Insert npsp__Address__c:
+  sf_object: npsp__Address__c
+  fields:
+  - Ownership_Type__c
+  - npsp__API_Response__c
+  - npsp__Address_Type__c
+  - npsp__Administrative_Area__c
+  - npsp__Ambiguous__c
+  - npsp__Congressional_District__c
+  - npsp__County_Name__c
+  - npsp__Default_Address__c
+  - npsp__Exclude_from_Updates__c
+  - npsp__Latest_End_Date__c
+  - npsp__Latest_Start_Date__c
+  - npsp__MailingCity__c
+  - npsp__MailingCountry__c
+  - npsp__MailingPostalCode__c
+  - npsp__MailingState__c
+  - npsp__MailingStreet2__c
+  - npsp__MailingStreet__c
+  - npsp__NCOA_Evaluation_Date__c
+  - npsp__NCOA_Result_Code__c
+  - npsp__Pre_Verification_Address__c
+  - npsp__Seasonal_End_Day__c
+  - npsp__Seasonal_End_Month__c
+  - npsp__Seasonal_Start_Day__c
+  - npsp__Seasonal_Start_Month__c
+  - npsp__State_Lower_District__c
+  - npsp__State_Upper_District__c
+  - npsp__Verification_Status__c
+  - npsp__Verified_Date__c
+  - npsp__Verified__c
+  lookups:
+    npsp__Household_Account__c:
+      table: Account
+Insert npsp__General_Accounting_Unit__c:
+  sf_object: npsp__General_Accounting_Unit__c
+  fields:
+  - Flow_Through_Fund__c
+  - Fund_Code_RE__c
+  - GL_Account__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Name
+  - Note__c
+  - Receipt_Friendly_Name__c
+  - Restricted__c
+  - Tax_Receipt_Business_Number__c
+  - Total_Allocations_This_Year_Mail_In__c
+  - Total_Allocations_This_Year_Parish__c
+  - Total_Allocations_This_Year_Phone__c
+  - Total_Allocations_this_year_online__c
+  - Type__c
+  - npsp__Active__c
+  - npsp__Average_Allocation__c
+  - npsp__Description__c
+  - npsp__First_Allocation_Date__c
+  - npsp__Largest_Allocation__c
+  - npsp__Last_Allocation_Date__c
+  - npsp__Number_of_Allocations_Last_N_Days__c
+  - npsp__Number_of_Allocations_Last_Year__c
+  - npsp__Number_of_Allocations_This_Year__c
+  - npsp__Number_of_Allocations_Two_Years_Ago__c
+  - npsp__Smallest_Allocation__c
+  - npsp__Total_Allocations_Last_N_Days__c
+  - npsp__Total_Allocations_Last_Year__c
+  - npsp__Total_Allocations_This_Year__c
+  - npsp__Total_Allocations_Two_Years_Ago__c
+  - npsp__Total_Allocations__c
+  - npsp__Total_Number_of_Allocations__c
+  lookups:
+    Fund_Beneficiary__c:
+      table: Account
+Insert Contact:
+  sf_object: Contact
+  fields:
+  - Birth_City_Province__c
+  - Birthplace__c
+  - Children__c
+  - Country_of_Birth__c
+  - Date_of_Death__c
+  - Date_of_Incardination__c
+  - Dietary_Restrictions__c
+  - DoNotCall
+  - Employer__c
+  - Ethnicity__c
+  - Facebook_ID__c
+  - FirstName
+  - GW_Volunteers__Volunteer_Auto_Reminder_Email_Opt_Out__c
+  - GW_Volunteers__Volunteer_Availability__c
+  - GW_Volunteers__Volunteer_Last_Web_Signup_Date__c
+  - GW_Volunteers__Volunteer_Manager_Notes__c
+  - GW_Volunteers__Volunteer_Notes__c
+  - GW_Volunteers__Volunteer_Organization__c
+  - GW_Volunteers__Volunteer_Skills__c
+  - GW_Volunteers__Volunteer_Status__c
+  - Gender__c
+  - Giving_Score__c
+  - HasOptedOutOfEmail
+  - HasOptedOutOfFax
+  - Inactive__c
+  - LastName
+  - Legacy_CID__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Legal_Name__c
+  - Maiden_Name__c
+  - Mailing_Address_Complete__c
+  - Marital_Status__c
+  - Marriage_License__c
+  - Ministerial_Status__c
+  - Occupation__c
+  - Ordination_Date__c
+  - Photo__c
+  - Preferred_Name__c
+  - Proclaim_External_ID__c
+  - Receipt_Type__c
+  - RecordTypeId
+  - Religious_Final_Vows__c
+  - Religious_First_Vows__c
+  - Religious_Suffix__c
+  - Retirement_Year__c
+  - Stage__c
+  - Start_Date__c
+  - Status__c
+  - Tax_Receipt_Email_Opt_In__c
+  - Transcripts_Received__c
+  - Type__c
+  - UCI__c
+  - dupcheck__dc3DisableDuplicateCheck__c
+  - dupcheck__dc3Index__c
+  - edu_Doctoral_Studies__c
+  - edu_Graduate_Studies__c
+  - edu_Post_Secondary_Studies__c
+  - npe01__AlternateEmail__c
+  - npe01__HomeEmail__c
+  - npe01__PreferredPhone__c
+  - npe01__Preferred_Email__c
+  - npe01__Primary_Address_Type__c
+  - npe01__Private__c
+  - npe01__Secondary_Address_Type__c
+  - npe01__SystemAccountProcessor__c
+  - npe01__WorkEmail__c
+  - npe01__WorkPhone__c
+  - npo02__AverageAmount__c
+  - npo02__Best_Gift_Year_Total__c
+  - npo02__Best_Gift_Year__c
+  - npo02__FirstCloseDate__c
+  - npo02__Household_Naming_Order__c
+  - npo02__LargestAmount__c
+  - npo02__LastCloseDate__c
+  - npo02__LastMembershipAmount__c
+  - npo02__LastMembershipDate__c
+  - npo02__LastMembershipLevel__c
+  - npo02__LastMembershipOrigin__c
+  - npo02__LastOppAmount__c
+  - npo02__MembershipEndDate__c
+  - npo02__MembershipJoinDate__c
+  - npo02__Naming_Exclusions__c
+  - npo02__NumberOfClosedOpps__c
+  - npo02__NumberOfMembershipOpps__c
+  - npo02__OppAmount2YearsAgo__c
+  - npo02__OppAmountLastNDays__c
+  - npo02__OppAmountLastYear__c
+  - npo02__OppAmountThisYear__c
+  - npo02__OppsClosed2YearsAgo__c
+  - npo02__OppsClosedLastNDays__c
+  - npo02__OppsClosedLastYear__c
+  - npo02__OppsClosedThisYear__c
+  - npo02__SmallestAmount__c
+  - npo02__Soft_Credit_Last_Year__c
+  - npo02__Soft_Credit_This_Year__c
+  - npo02__Soft_Credit_Total__c
+  - npo02__Soft_Credit_Two_Years_Ago__c
+  - npo02__SystemHouseholdProcessor__c
+  - npo02__TotalMembershipOppAmount__c
+  - npo02__TotalOppAmount__c
+  - npsp__Deceased__c
+  - npsp__Do_Not_Contact__c
+  - npsp__Exclude_from_Household_Formal_Greeting__c
+  - npsp__Exclude_from_Household_Informal_Greeting__c
+  - npsp__Exclude_from_Household_Name__c
+  - npsp__First_Soft_Credit_Amount__c
+  - npsp__First_Soft_Credit_Date__c
+  - npsp__Largest_Soft_Credit_Amount__c
+  - npsp__Largest_Soft_Credit_Date__c
+  - npsp__Last_Soft_Credit_Amount__c
+  - npsp__Last_Soft_Credit_Date__c
+  - npsp__Number_of_Soft_Credits_Last_N_Days__c
+  - npsp__Number_of_Soft_Credits_Last_Year__c
+  - npsp__Number_of_Soft_Credits_This_Year__c
+  - npsp__Number_of_Soft_Credits_Two_Years_Ago__c
+  - npsp__Number_of_Soft_Credits__c
+  - npsp__Soft_Credit_Last_N_Days__c
+  - npsp__is_Address_Override__c
+  - pi__Needs_Score_Synced__c
+  - pi__Pardot_Last_Scored_At__c
+  - pi__campaign__c
+  - pi__comments__c
+  - pi__conversion_date__c
+  - pi__conversion_object_name__c
+  - pi__conversion_object_type__c
+  - pi__created_date__c
+  - pi__first_activity__c
+  - pi__first_search_term__c
+  - pi__first_search_type__c
+  - pi__first_touch_url__c
+  - pi__grade__c
+  - pi__last_activity__c
+  - pi__notes__c
+  - pi__pardot_hard_bounced__c
+  - pi__score__c
+  - pi__url__c
+  - pi__utm_campaign__c
+  - pi__utm_content__c
+  - pi__utm_medium__c
+  - pi__utm_source__c
+  - pi__utm_term__c
+  - pmdm__IsClient__c
+  lookups:
+    AccountId:
+      table: Account
+    Cohort__c:
+      table: Cohort__c
+    Home_Parish__c:
+      table: Account
+    Religious_Order__c:
+      table: Account
+    ReportsToId:
+      table: Contact
+      after: Insert Contact
+    Spiritual_Director__c:
+      table: Contact
+      after: Insert Contact
+    npo02__Household__c:
+      table: npo02__Household__c
+    npsp__Batch__c:
+      table: npsp__Batch__c
+    npsp__Current_Address__c:
+      table: npsp__Address__c
+    npsp__Primary_Affiliation__c:
+      table: Account
+Insert Campaign:
+  sf_object: Campaign
+  fields:
+  - Appeal_Code__c
+  - ArchD_Allotment__c
+  - Call_to_Action__c
+  - Channel__c
+  - DB_Campaign_Tactic__c
+  - Department__c
+  - Directions_Information__c
+  - Event_End__c
+  - Event_Location__c
+  - Event_Start__c
+  - Fund_Name_s__c
+  - Funding_Focus__c
+  - Funds_Receivable__c
+  - GW_Volunteers__Volunteer_Website_Time_Zone__c
+  - Goal__c
+  - Intended_Outcome__c
+  - IsActive
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Name
+  - Num_Allocations__c
+  - PA_Implemented_email_appeal__c
+  - PA_Parish_Project__c
+  - PA_Stage__c
+  - PA_Utilizing_Direct_Mail__c
+  - PA_custom_website_live__c
+  - Parish_Goal__c
+  - Parking_Details__c
+  - RecordTypeId
+  - Venue_Name__c
+  - Web_friendly_name__c
+  - pi__Pardot_Campaign_Id__c
+  - pi__Pardot_Has_Dependencies__c
+  lookups:
+    Fund__c:
+      table: npsp__General_Accounting_Unit__c
+    ParentId:
+      table: Campaign
+      after: Insert Campaign
+    Parish_Contact__c:
+      table: Contact
+    Parish__c:
+      table: Account
+    Project_Advance_Team__c:
+      table: Account
+    Related_Program__c:
+      table: pmdm__Program__c
+    Venue_Contact__c:
+      table: Contact
+Insert Candidate__c:
+  sf_object: Candidate__c
+  fields:
+  - Name
+  - RecordTypeId
+  - Stage__c
+  - Transcripts_Received__c
+  lookups:
+    Cohort__c:
+      table: Cohort__c
+    Contact__c:
+      table: Contact
+    Spiritual_Director__c:
+      table: Contact
+Insert Case:
+  sf_object: Case
+  fields:
+  - Due_Date__c
+  - IsEscalated
+  - Jira_Ticket__c
+  - RecordTypeId
+  - Webpage_issue_occuring__c
+  lookups:
+    AccountId:
+      table: Account
+    ContactId:
+      table: Contact
+    ParentId:
+      table: Case
+      after: Insert Case
+    Release__c:
+      table: Release__c
+Insert Committee__c:
+  sf_object: Committee__c
+  fields:
+  - Active__c
+  - Count_of_Active_Members__c
+  - Date_Dissolved__c
+  - Date_Established__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Name
+  - Term_Length_Years__c
+  - Type__c
+  lookups:
+    Parent_Account__c:
+      table: Account
+    Primary_Contact__c:
+      table: Contact
+Insert Contact_Attribute__c:
+  sf_object: Contact_Attribute__c
+  fields:
+  - Comment__c
+  - Language__c
+  - Proficiency__c
+  - RecordTypeId
+  lookups:
+    Contact__c:
+      table: Contact
+Insert Contract:
+  sf_object: Contract
+  fields:
+  - Status
+  lookups:
+    AccountId:
+      table: Account
+    CustomerSignedId:
+      table: Contact
+Insert Employment_Records__c:
+  sf_object: Employment_Records__c
+  fields:
+  - Description__c
+  - Employee_ID__c
+  - Employment_Type__c
+  - Employment_status__c
+  - End_Date__c
+  - Exclude_from_WorkSafeBC_survey_emails__c
+  - Friday__c
+  - Last_WorkSafe_Survey_Submission__c
+  - Monday__c
+  - Name
+  - Office__c
+  - Phone_Extension__c
+  - Start_Date__c
+  - Thursday__c
+  - Title__c
+  - Tuesday__c
+  - Wednesday__c
+  - Works_in_JPII_Centre__c
+  lookups:
+    Contact__c:
+      table: Contact
+    Reports_to__c:
+      table: Contact
+Insert Ministry_Activity__c:
+  sf_object: Ministry_Activity__c
+  fields:
+  - Avg_number_of_attendees__c
+  - Date_Time_of_Event__c
+  - Day_of_the_week__c
+  - Description__c
+  - End_Time__c
+  - Frequency__c
+  - Location__c
+  - Name
+  - New_initiative__c
+  - Primary_Purpose__c
+  - RecordTypeId
+  - Start_time__c
+  - Status__c
+  - Trend_of_Attendance__c
+  lookups:
+    Ministry_Group__c:
+      table: Account
+    Primary_Contact__c:
+      table: Contact
+Insert Sacrament__c:
+  sf_object: Sacrament__c
+  fields:
+  - Baptismal_Name__c
+  - Date__c
+  - Godfather__c
+  - Godmother__c
+  - Ordination_Type__c
+  - RecordTypeId
+  lookups:
+    Celebrant__c:
+      table: Contact
+    Contact__c:
+      table: Contact
+    Location__c:
+      table: Account
+    Spouse__c:
+      table: Contact
+Insert npe4__Relationship__c:
+  sf_object: npe4__Relationship__c
+  fields:
+  - npe4__Description__c
+  - npe4__SYSTEM_SystemCreated__c
+  - npe4__Status__c
+  - npe4__Type__c
+  - npsp__Related_Opportunity_Contact_Role__c
+  lookups:
+    npe4__Contact__c:
+      table: Contact
+    npe4__ReciprocalRelationship__c:
+      table: npe4__Relationship__c
+      after: Insert npe4__Relationship__c
+    npe4__RelatedContact__c:
+      table: Contact
+Insert npe5__Affiliation__c:
+  sf_object: npe5__Affiliation__c
+  fields:
+  - Position__c
+  - Reappointment__c
+  - RecordTypeId
+  - Type__c
+  - npe5__Description__c
+  - npe5__EndDate__c
+  - npe5__Primary__c
+  - npe5__Role__c
+  - npe5__StartDate__c
+  - npe5__Status__c
+  - npsp__Related_Opportunity_Contact_Role__c
+  lookups:
+    npe5__Contact__c:
+      table: Contact
+    npe5__Organization__c:
+      table: Account
+Insert pmdm__ServiceSchedule__c:
+  sf_object: pmdm__ServiceSchedule__c
+  fields:
+  - Name
+  - pmdm__AllDay__c
+  - pmdm__CreateServiceSessionRecords__c
+  - pmdm__DaysOfWeek__c
+  - pmdm__DefaultServiceQuantity__c
+  - pmdm__FirstSessionEnd__c
+  - pmdm__FirstSessionStart__c
+  - pmdm__Frequency__c
+  - pmdm__Interval__c
+  - pmdm__MonthlyRecurrenceOption__c
+  - pmdm__NumberOfServiceSessions__c
+  - pmdm__ParticipantCapacity__c
+  - pmdm__ServiceScheduleEndDate__c
+  - pmdm__ServiceScheduleEnds__c
+  lookups:
+    pmdm__OtherServiceProvider__c:
+      table: Contact
+    pmdm__PrimaryServiceProvider__c:
+      table: Contact
+    pmdm__Service__c:
+      table: pmdm__Service__c
+Insert Assignment__c:
+  sf_object: Assignment__c
+  fields:
+  - End_Date__c
+  - Notes__c
+  - Position__c
+  - Reappointment__c
+  - RecordTypeId
+  - Start_Date__c
+  - Type__c
+  lookups:
+    Account__c:
+      table: Account
+    Committee__c:
+      table: Committee__c
+    Contact__c:
+      table: Contact
+Insert CampaignMember:
+  sf_object: CampaignMember
+  fields:
+  - Level_of_Support__c
+  - Number_of_Guests__c
+  - Role__c
+  lookups:
+    CampaignId:
+      table: Campaign
+    ContactId:
+      table: Contact
+    LeadId:
+      table: Lead
+Insert Component_Change__c:
+  sf_object: Component_Change__c
+  fields:
+  - Action__c
+  - Change_Set_Details__c
+  - Data_Migration_Backfill_Notes__c
+  - Deployment_Status__c
+  - Development_Environment2__c
+  - Development_Status__c
+  - JIRA__c
+  - Requirements__c
+  - Technical_Details__c
+  lookups:
+    Case__c:
+      table: Case
+    Component_Label__c:
+      table: Component__c
+Insert ParishFinancialReport__c:
+  sf_object: ParishFinancialReport__c
+  fields:
+  - Advertisingandpromotion__c
+  - AltarSanctuarySupplies__c
+  - BCCatholicExpenditures__c
+  - Bankinterestcharges__c
+  - Bequests__c
+  - BuildingFund__c
+  - BulletinAdvertising__c
+  - CapitalCosts__c
+  - CashinHand__c
+  - ChanceryDepositAccountBalance__c
+  - CharitableWorks__c
+  - CollectionCharitableWorks__c
+  - CollectionOrdinaryEnvelopesOnline__c
+  - CollectionOrdinaryLoose__c
+  - ConventExpenses__c
+  - DebtInterestPayment__c
+  - DiocesanAsessment__c
+  - DiocesanCollectionsPymts__c
+  - DiocesanCollections__c
+  - DiocesanGrant__c
+  - Email__c
+  - Events__c
+  - FirstName__c
+  - FoodHouseholdSupplies__c
+  - FundraisingBazaar__c
+  - FundraisingBingo__c
+  - FundraisingOthers__c
+  - FundraisingParishOrganizations__c
+  - FundraisingSchool__c
+  - HSTExpense__c
+  - HSTRebate__c
+  - Honorariums__c
+  - InsuranceClaimRecoveries__c
+  - Insurance__c
+  - InterestIncomeChancery__c
+  - InterestIncomeOther__c
+  - InterestRebateLowInterestRevolvingFund__c
+  - Janitorial__c
+  - LastName__c
+  - Loan1__c
+  - Loan2__c
+  - Loan3__c
+  - Loan4__c
+  - Loan5__c
+  - Miscellaneous__c
+  - Name
+  - OfficeSuppliesandExpenses__c
+  - ParishOrganizationsActivities__c
+  - Phone__c
+  - PreschoolsDaycare__c
+  - ProfessionalDevelopment__c
+  - ProfessionalandConsultingFees__c
+  - Programs__c
+  - ProjectAdvanceExpense__c
+  - ProjectAdvanceRebate__c
+  - ProjectRestrictedSavings__c
+  - PropertyTaxes__c
+  - PublicationsnotBCCatholic__c
+  - R03_BC_Catholic_Revenue__c
+  - ReligiousEducationExpensesAdult__c
+  - ReligiousEducationExpensesPREPCCD__c
+  - ReligiousEducationExpensesRCIA__c
+  - ReligiousEducationExpensesYouth__c
+  - ReligiousEducationIncomeAdult__c
+  - ReligiousEducationIncomePREPCCD__c
+  - ReligiousEducationIncomeRCIA__c
+  - ReligiousEducationIncomeYouth__c
+  - RentalEquipmentRental__c
+  - RentalFacilitiesRental__c
+  - RentalIncome__c
+  - RepairsmaintenanceequipmentEXT__c
+  - RepairsmaintenanceequipmentORD__c
+  - ReportingPeriod__c
+  - Reporting_Period_Date__c
+  - SalaryAssistantPastor__c
+  - SalaryBenefits__c
+  - SalaryPastor__c
+  - SalaryStaff__c
+  - SalaryandhonorariumsClergyextrahelp__c
+  - SaleofGoods__c
+  - SaleofProperty__c
+  - ShrinesCandlesVigilLights__c
+  - SpecialCollectionsother__c
+  - SpecialDonations__c
+  - Specialcollectionsotherdomestic__c
+  - Specialcollectionsotherforeign__c
+  - Stage__c
+  - StoleFees__c
+  - SubmitterComments__c
+  - SubsidiesElementarySchool__c
+  - SubsidiesFundsRaisedbyParentsStudents__c
+  - SubsidiesHighSchool__c
+  - TotalLoanBalances__c
+  - Utilities__c
+  - YouthMinistryRebate__c
+  lookups:
+    Campaign_Source__c:
+      table: Campaign
+    Parish__c:
+      table: Account
+    Submitter__c:
+      table: Contact
+Insert WorkSafe_Daily_Survey_Submissions__c:
+  sf_object: WorkSafe_Daily_Survey_Submissions__c
+  fields:
+  - Are_you_experiencing_symptoms__c
+  - Comments__c
+  - Form_Submission_Date_Time__c
+  - Muscle_Aches__c
+  - Will_you_be_at_the_JPII_Centre_today__c
+  - sympt_Abdominalpain__c
+  - sympt_Conjunctivitispinkeye__c
+  - sympt_Coughorworseningofchroniccough__c
+  - sympt_Diarrhea__c
+  - sympt_Dizzinessconfusion__c
+  - sympt_Fatigue__c
+  - sympt_Fever__c
+  - sympt_Headache__c
+  - sympt_Lossofappetite__c
+  - sympt_Lossofsmellortaste__c
+  - sympt_Nauseaandvomiting__c
+  - sympt_Runnynose__c
+  - sympt_Shortnessofbreath__c
+  - sympt_Skinrashesordiscoloration__c
+  - sympt_Sorethroat__c
+  - sympt_Stuffynose__c
+  lookups:
+    Employee__c:
+      table: Employment_Records__c
+Insert npe03__Recurring_Donation__c:
+  sf_object: npe03__Recurring_Donation__c
+  fields:
+  - AB_Thank_You_Letter_Sent_Date__c
+  - AB_Thank_You_Letter_Status__c
+  - Anonymous__c
+  - DRF_Ref__c
+  - Donor_Comments__c
+  - Envelope__c
+  - Errors__c
+  - Fund_Name_s__c
+  - IATS_recurring__IATS_Address__c
+  - IATS_recurring__IATS_City__c
+  - IATS_recurring__IATS_Country__c
+  - IATS_recurring__IATS_Email__c
+  - IATS_recurring__IATS_Fax__c
+  - IATS_recurring__IATS_First_Name__c
+  - IATS_recurring__IATS_Item_10_Label__c
+  - IATS_recurring__IATS_Item_10__c
+  - IATS_recurring__IATS_Item_11_Label__c
+  - IATS_recurring__IATS_Item_11__c
+  - IATS_recurring__IATS_Item_12_Label__c
+  - IATS_recurring__IATS_Item_12__c
+  - IATS_recurring__IATS_Item_13_Label__c
+  - IATS_recurring__IATS_Item_13__c
+  - IATS_recurring__IATS_Item_14_Label__c
+  - IATS_recurring__IATS_Item_14__c
+  - IATS_recurring__IATS_Item_15_Label__c
+  - IATS_recurring__IATS_Item_15__c
+  - IATS_recurring__IATS_Item_1_Label__c
+  - IATS_recurring__IATS_Item_1__c
+  - IATS_recurring__IATS_Item_2_Label__c
+  - IATS_recurring__IATS_Item_2__c
+  - IATS_recurring__IATS_Item_3_Label__c
+  - IATS_recurring__IATS_Item_3__c
+  - IATS_recurring__IATS_Item_4_Label__c
+  - IATS_recurring__IATS_Item_4__c
+  - IATS_recurring__IATS_Item_5_Label__c
+  - IATS_recurring__IATS_Item_5__c
+  - IATS_recurring__IATS_Item_6_Label__c
+  - IATS_recurring__IATS_Item_6__c
+  - IATS_recurring__IATS_Item_7_Label__c
+  - IATS_recurring__IATS_Item_7__c
+  - IATS_recurring__IATS_Item_8_Label__c
+  - IATS_recurring__IATS_Item_8__c
+  - IATS_recurring__IATS_Item_9_Label__c
+  - IATS_recurring__IATS_Item_9__c
+  - IATS_recurring__IATS_Last_Name__c
+  - IATS_recurring__IATS_Phone1__c
+  - IATS_recurring__IATS_Phone2__c
+  - IATS_recurring__IATS_State__c
+  - IATS_recurring__IATS_Zip_Code__c
+  - IATS_recurring__iATS_Company_Name__c
+  - IATS_recurring__iATS_Title__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Name
+  - Notes__c
+  - Parish_Envelope_Number__c
+  - Payment_Methods__c
+  - Reminder_Status__c
+  - Source__c
+  - npe03__Amount__c
+  - npe03__Date_Established__c
+  - npe03__Installment_Period__c
+  - npe03__Installments__c
+  - npe03__Last_Payment_Date__c
+  - npe03__Next_Payment_Date__c
+  - npe03__Open_Ended_Status__c
+  - npe03__Paid_Amount__c
+  - npe03__Schedule_Type__c
+  - npe03__Total_Paid_Installments__c
+  - npsp__Always_Use_Last_Day_Of_Month__c
+  - npsp__CurrentYearValue__c
+  - npsp__Day_of_Month__c
+  - npsp__EndDate__c
+  - npsp__NextYearValue__c
+  - npsp__PaymentMethod__c
+  - npsp__RecurringType__c
+  - npsp__StartDate__c
+  - npsp__Status__c
+  lookups:
+    Collected_for_Parish__c:
+      table: Account
+    npe03__Contact__c:
+      table: Contact
+    npe03__Organization__c:
+      table: Account
+    npe03__Recurring_Donation_Campaign__c:
+      table: Campaign
+Insert pmdm__ProgramEngagement__c:
+  sf_object: pmdm__ProgramEngagement__c
+  fields:
+  - G_Number__c
+  - Legacy_Notes__c
+  - Member_of_online_community__c
+  - Monthly_RAP_Rate__c
+  - Name
+  - Paper_File_Location__c
+  - RecordTypeId
+  - Start_Up_Costs__c
+  - dc3DisableDuplicateCheck__c
+  - pmdm__ApplicationDate__c
+  - pmdm__AutoName_Override__c
+  - pmdm__EndDate__c
+  - pmdm__Role__c
+  - pmdm__Stage__c
+  - pmdm__StartDate__c
+  lookups:
+    Invited_Referred_by__c:
+      table: Contact
+    Primary_Campaign_Source__c:
+      table: Campaign
+    pmdm__Account__c:
+      table: Account
+    pmdm__Contact__c:
+      table: Contact
+    pmdm__ProgramCohort__c:
+      table: pmdm__ProgramCohort__c
+    pmdm__Program__c:
+      table: pmdm__Program__c
+    Constituent_Group__c:
+      table: Account
+    Refuge_CoSponsor__c:
+      table: Contact
+    Visa_Office__c:
+      table: Account
+Insert pmdm__ServiceSession__c:
+  sf_object: pmdm__ServiceSession__c
+  fields:
+  - Name
+  - pmdm__SessionEnd__c
+  - pmdm__SessionStart__c
+  - pmdm__Status__c
+  lookups:
+    pmdm__OtherServiceProvider__c:
+      table: Contact
+    pmdm__PrimaryServiceProvider__c:
+      table: Contact
+    pmdm__ServiceSchedule__c:
+      table: pmdm__ServiceSchedule__c
+Insert Group__c:
+  sf_object: Group__c
+  fields:
+  - Curriculum__c
+  - End_Date__c
+  - Location__c
+  - Meeting_day__c
+  - Name
+  - Start_Date__c
+  - Status__c
+  lookups:
+    Group_Leader__c:
+      table: pmdm__ProgramEngagement__c
+    Parish__c:
+      table: Account
+    Program__c:
+      table: pmdm__Program__c
+Insert pmdm__ServiceDelivery__c:
+  sf_object: pmdm__ServiceDelivery__c
+  fields:
+  - Compensation_Amount__c
+  - Compensation__c
+  - Name
+  - Service_Provider_Fees__c
+  - pmdm__AttendanceStatus__c
+  - pmdm__AutonameOverride__c
+  - pmdm__DeliveryDate__c
+  - pmdm__Quantity__c
+  lookups:
+    pmdm__Account__c:
+      table: Account
+    pmdm__Contact__c:
+      table: Contact
+    pmdm__ProgramEngagement__c:
+      table: pmdm__ProgramEngagement__c
+    pmdm__ServiceSession__c:
+      table: pmdm__ServiceSession__c
+    pmdm__Service_Provider__c:
+      table: Contact
+    pmdm__Service__c:
+      table: pmdm__Service__c
+Insert Group_Member__c:
+  sf_object: Group_Member__c
+  fields:
+  - Role__c
+  lookups:
+    Contact__c:
+      table: Contact
+    Program_Affiliation__c:
+      table: pmdm__Program__c
+    Program_Group__c:
+      table: Group__c
+Insert Spiritual_Report__c:
+  sf_object: Spiritual_Report__c
+  fields:
+  - Date_submitted__c
+  - Name
+  - RecordTypeId
+  - Reporting_Period_End_Date__c
+  - Reporting_Period_Start_Date__c
+  - Written_Report__c
+  - attending_Mass_weekly__c
+  - stats_Attendees_engaged_in_service__c
+  - stats_Attendees_with_Spiritual_Directors__c
+  - stats_Individuals_in_small_groups__c
+  - stats_Non_Catholic_guests_who_returned__c
+  - stats_Non_Catholic_regular_attendees__c
+  lookups:
+    Account__c:
+      table: Account
+    Contact__c:
+      table: Contact
+    Program_Group__c:
+      table: Group__c
+Insert IATSPayment__IATS_Customer_Code__c:
+  sf_object: IATSPayment__IATS_Customer_Code__c
+  fields:
+  - Contact_Name__c
+  - IATSPayment__ACH_Account_Number__c
+  - IATSPayment__ACH_Account_Type__c
+  - IATSPayment__ACH_Reference_Number__c
+  - IATSPayment__Auction_ID__c
+  - IATSPayment__Batch_Update_Failure_Details__c
+  - IATSPayment__Batch_Update_Status__c
+  - IATSPayment__Complete_Batch_Update__c
+  - IATSPayment__Credit_Card_Expiry_Date__c
+  - IATSPayment__Credit_Card_Number__c
+  - IATSPayment__Credit_Card_Type__c
+  - IATSPayment__Direct_Debit_Registration_Error__c
+  - IATSPayment__Direct_Debit_Registration_Status__c
+  - IATSPayment__FAPS_Credit_Card_ID__c
+  - IATSPayment__FAPS_Recurring_ID__c
+  - IATSPayment__Last_Batch_Processing_Date_Time__c
+  - IATSPayment__Mandate_ID__c
+  - IATSPayment__Mandate_Signing_Date__c
+  - IATSPayment__Method_of_Payment__c
+  - IATSPayment__Payer_Address__c
+  - IATSPayment__Payer_City__c
+  - IATSPayment__Payer_Country__c
+  - IATSPayment__Payer_Email__c
+  - IATSPayment__Payer_First_Name__c
+  - IATSPayment__Payer_Last_Name__c
+  - IATSPayment__Payer_State__c
+  - IATSPayment__Payer_Zip_Code__c
+  - IATSPayment__Recurring_Payment_Amount__c
+  - IATSPayment__Recurring_Payment_Begin_Date__c
+  - IATSPayment__Recurring_Payment_End_Date__c
+  - IATSPayment__Recurring_Payment_Schedule_Date__c
+  - IATSPayment__Recurring_Payment_Schedule_Type__c
+  - IATSPayment__Recurring_Payment_Status__c
+  - IATSPayment__Total_Amount_of_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Rejected_Transactions__c
+  - Name
+  lookups:
+    IATSPayment__Account__c:
+      table: Account
+    IATSPayment__Contact__c:
+      table: Contact
+    IATSPayment__IATS_Account__c:
+      table: IATSPayment__IATS_Account__c
+    IATSPayment__Opportunity__c:
+      table: Opportunity
+      after: Insert Opportunity
+    IATSPayment__iATS_UK_AUDDIS_Return_del__c:
+      table: IATSPayment__iATS_Debit_Return__c
+      after: Insert IATSPayment__iATS_Debit_Return__c
+    IATS_recurring__Recurring_Donation__c:
+      table: npe03__Recurring_Donation__c
+Insert IATSPayment__Transaction__c:
+  sf_object: IATSPayment__Transaction__c
+  fields:
+  - IATSPayment__ACH_Account_Number__c
+  - IATSPayment__ACH_Account_Type__c
+  - IATSPayment__Amount__c
+  - IATSPayment__Amount_currency__c
+  - IATSPayment__Credit_Card_Expiry_Date__c
+  - IATSPayment__Credit_Card_Type__c
+  - IATSPayment__Credit_Card__c
+  - IATSPayment__Currency__c
+  - IATSPayment__Date__c
+  - IATSPayment__Invoice_Number__c
+  - IATSPayment__Journal_ID__c
+  - IATSPayment__Mandate_ID_del__c
+  - IATSPayment__Method_of_Payment__c
+  - IATSPayment__Payer_Address__c
+  - IATSPayment__Payer_City__c
+  - IATSPayment__Payer_First_Name__c
+  - IATSPayment__Payer_Last_name__c
+  - IATSPayment__Payer_State__c
+  - IATSPayment__Payer_Zip_Code__c
+  - IATSPayment__Status__c
+  - IATSPayment__UK_DD_Reference_del_del__c
+  - Name
+  lookups:
+    IATSPayment__Account__c:
+      table: Account
+    IATSPayment__Contact__c:
+      table: Contact
+    IATSPayment__Contract__c:
+      table: Contract
+    IATSPayment__IATS_Account__c:
+      table: IATSPayment__IATS_Account__c
+    IATSPayment__IATS_Customer_Code__c:
+      table: IATSPayment__IATS_Customer_Code__c
+    IATSPayment__Opportunity__c:
+      table: Opportunity
+      after: Insert Opportunity
+    IATSPayment__iATS_Debit_Return_del__c:
+      table: IATSPayment__iATS_Debit_Return__c
+      after: Insert IATSPayment__iATS_Debit_Return__c
+Insert IATSPayment__iATS_Debit_Return__c:
+  sf_object: IATSPayment__iATS_Debit_Return__c
+  fields:
+  - IATSPayment__ACH_Account_Number__c
+  - IATSPayment__BACS_Report_Type_UK__c
+  - IATSPayment__Effective_Date__c
+  - IATSPayment__Invoice_Number__c
+  - IATSPayment__Journal_ID__c
+  - IATSPayment__Method_of_Payment__c
+  - IATSPayment__New_Amount__c
+  - IATSPayment__Original_Transaction_Date__c
+  - IATSPayment__Payer_Account_Number__c
+  - IATSPayment__Payer_Name__c
+  - IATSPayment__Payer_New_Name__c
+  - IATSPayment__Payer_New_Sort_Code__c
+  - IATSPayment__Payers_New_Account_Number__c
+  - IATSPayment__Payers_Sort_Code__c
+  - IATSPayment__Reason_Code__c
+  - IATSPayment__Reason_Desc__c
+  - IATSPayment__Reference_Number__c
+  - IATSPayment__Return_Amount__c
+  - IATSPayment__Return_Date__c
+  - Name
+  lookups:
+    IATSPayment__iATS_Account_del__c:
+      table: IATSPayment__IATS_Account__c
+    IATSPayment__iATS_Customer_Code__c:
+      table: IATSPayment__IATS_Customer_Code__c
+    IATSPayment__iATS_Transaction__c:
+      table: IATSPayment__Transaction__c
+Insert IATSPayment__iATS_Batch_Entry__c:
+  sf_object: IATSPayment__iATS_Batch_Entry__c
+  fields:
+  - Bypass_Validation_Rules__c
+  - IATSPayment__ACH_Direct_Debit_Bank_Numbers_encrypted__c
+  - IATSPayment__Amount__c
+  - IATSPayment__Batch_Processing_Date_Time__c
+  - IATSPayment__Batch_Processing_Failure_Details__c
+  - IATSPayment__City__c
+  - IATSPayment__Contact_Record_Type_ID__c
+  - IATSPayment__Country__c
+  - IATSPayment__Credit_Card_Expiry_Date__c
+  - IATSPayment__Credit_Card_Number__c
+  - IATSPayment__Credit_Card_Type__c
+  - IATSPayment__Direct_Debit_Account_Type__c
+  - IATSPayment__Email__c
+  - IATSPayment__First_Name__c
+  - IATSPayment__Home_Phone__c
+  - IATSPayment__Include_in_Next_Batch_Entry_Process__c
+  - IATSPayment__Last_Name__c
+  - IATSPayment__Method_of_Payment__c
+  - IATSPayment__Mobile_Phone__c
+  - IATSPayment__Opportunity_Record_Type_ID__c
+  - IATSPayment__Recurring_Donation_Record_type_ID__c
+  - IATSPayment__Recurring_Payment_Begin_Date__c
+  - IATSPayment__Recurring_Payment_End_Date__c
+  - IATSPayment__Recurring_Payment_Schedule_Type__c
+  - IATSPayment__State__c
+  - IATSPayment__Status__c
+  - IATSPayment__Street_Address__c
+  - IATSPayment__Zip_Postal_Code__c
+  - Original_Opportunity_Id__c
+  lookups:
+    IATSPayment__Contact__c:
+      table: Contact
+    IATSPayment__Opportunity__c:
+      table: Opportunity
+      after: Insert Opportunity
+    IATSPayment__Primary_Campaign_Source__c:
+      table: Campaign
+    IATSPayment__iATS_Customer_Code__c:
+      table: IATSPayment__IATS_Customer_Code__c
+    IATSPayment__iATS_Merchant_Account__c:
+      table: IATSPayment__IATS_Account__c
+    IATSPayment__iATS_Transaction__c:
+      table: IATSPayment__Transaction__c
+    IATS_recurring__Recurring_Donation__c:
+      table: npe03__Recurring_Donation__c
+Insert Opportunity:
+  sf_object: Opportunity
+  fields:
+  - AB_Thank_You_Letter_Sent_Date__c
+  - AB_Thank_You_Letter_Status__c
+  - ACH_Direct_Debit_Account_Type__c
+  - ACH_Direct_Debit_Bank_Numbers__c
+  - Allocation_Fund_Types__c
+  - Allocation_Type_PA_Count__c
+  - Anonymous__c
+  - CC_Expiry_Date_MM_YY__c
+  - CC__c
+  - Cheque_Date__c
+  - CloseDate
+  - Credit_Card_Type__c
+  - DB_Competitor__c
+  - DRF_Ref__c
+  - Donor_Comments__c
+  - Donor_Requests_Legacy_Gift_Info__c
+  - Envelope__c
+  - Errors__c
+  - Fund_Name_s__c
+  - Gift_Date_of_transfer__c
+  - IATSPayment__Address__c
+  - IATSPayment__City__c
+  - IATSPayment__Country__c
+  - IATSPayment__Email__c
+  - IATSPayment__Fax__c
+  - IATSPayment__First_Name__c
+  - IATSPayment__IATS_Item_10_Label__c
+  - IATSPayment__IATS_Item_10__c
+  - IATSPayment__IATS_Item_11_Label__c
+  - IATSPayment__IATS_Item_11__c
+  - IATSPayment__IATS_Item_12_Label__c
+  - IATSPayment__IATS_Item_12__c
+  - IATSPayment__IATS_Item_13_Label__c
+  - IATSPayment__IATS_Item_13__c
+  - IATSPayment__IATS_Item_14_Label__c
+  - IATSPayment__IATS_Item_14__c
+  - IATSPayment__IATS_Item_15_Label__c
+  - IATSPayment__IATS_Item_15__c
+  - IATSPayment__IATS_Item_1_Label__c
+  - IATSPayment__IATS_Item_2_label__c
+  - IATSPayment__IATS_Item_3_Label__c
+  - IATSPayment__IATS_Item_4_Label__c
+  - IATSPayment__IATS_Item_5_Label__c
+  - IATSPayment__IATS_Item_6_Label__c
+  - IATSPayment__IATS_Item_7__c
+  - IATSPayment__IATS_Item_7_label__c
+  - IATSPayment__IATS_Item_8_Label__c
+  - IATSPayment__IATS_Item_8__c
+  - IATSPayment__IATS_Item_9_Label__c
+  - IATSPayment__IATS_Item_9__c
+  - IATSPayment__IATS_Title__c
+  - IATSPayment__Item1__c
+  - IATSPayment__Item2__c
+  - IATSPayment__Item3__c
+  - IATSPayment__Item4__c
+  - IATSPayment__Item5__c
+  - IATSPayment__Item6__c
+  - IATSPayment__Last_Name__c
+  - IATSPayment__Phone1__c
+  - IATSPayment__Phone2__c
+  - IATSPayment__State__c
+  - IATSPayment__Total_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Approved_Transactions__c
+  - IATSPayment__Total_Number_of_Rejected_Transactions__c
+  - IATSPayment__Zip_Code__c
+  - IATSPayment__iATS_Company_Name__c
+  - IsPrivate
+  - Latest_iATS_Transaction_ID__c
+  - Legacy_ID__c
+  - Legacy_Source__c
+  - Method_of_Payment__c
+  - NPSPDataImportId__c
+  - Name
+  - Num_Allocations__c
+  - Number_of_stocks__c
+  - Parish_Envelope__c
+  - Payment_Method__c
+  - Posted_Date__c
+  - RCAV_Do_Not_Print__c
+  - RE_Appeal__c
+  - RE_Authorization_Number__c
+  - RE_Campaign__c
+  - RE_Fund__c
+  - RE_Previous_Receipt_Numbers__c
+  - RE_Receipt_Date__c
+  - RE_Receipt_Number__c
+  - RE_Receipt_Stack__c
+  - RecordTypeId
+  - Reference__c
+  - Reminder_Date__c
+  - Reminder_Status__c
+  - Sale_Status__c
+  - Source__c
+  - StageName
+  - Stock_Date_of_sale__c
+  - Stock_Type__c
+  - Stock_unit_value_on_transfer_date__c
+  - Tax_Receipt_Amount__c
+  - Tax_Receipt_Preference__c
+  - Tax_Receipt_Status__c
+  - Total_iATS_Payments__c
+  - Unit_value_when_sold__c
+  - iATS_Processing_Fees__c
+  - kell6_core__Appraiser_Details__c
+  - kell6_core__Benefit_Value__c
+  - kell6_core__Legacy_Receipt_Number__c
+  - kell6_core__No_Receipt__c
+  - kell6_core__Receipt_Date__c
+  - kell6_core__Receipted__c
+  - kell6_core__Tax_Receipt_Description__c
+  - kell6_core__Total_Receipted_Amount__c
+  - npe01__Contact_Id_for_Role__c
+  - npe01__Do_Not_Automatically_Create_Payment__c
+  - npe01__Member_Level__c
+  - npe01__Membership_End_Date__c
+  - npe01__Membership_Origin__c
+  - npe01__Membership_Start_Date__c
+  - npo02__systemHouseholdContactRoleProcessor__c
+  - npsp__Acknowledgment_Date__c
+  - npsp__Acknowledgment_Status__c
+  - npsp__Ask_Date__c
+  - npsp__Batch_Number__c
+  - npsp__Closed_Lost_Reason__c
+  - npsp__CommitmentId__c
+  - npsp__DisableContactRoleAutomation__c
+  - npsp__Fair_Market_Value__c
+  - npsp__Gift_Strategy__c
+  - npsp__Grant_Contract_Date__c
+  - npsp__Grant_Contract_Number__c
+  - npsp__Grant_Period_End_Date__c
+  - npsp__Grant_Period_Start_Date__c
+  - npsp__Grant_Program_Area_s__c
+  - npsp__Grant_Requirements_Website__c
+  - npsp__Honoree_Name__c
+  - npsp__In_Kind_Description__c
+  - npsp__In_Kind_Donor_Declared_Value__c
+  - npsp__In_Kind_Type__c
+  - npsp__Is_Grant_Renewal__c
+  - npsp__Matching_Gift_Employer__c
+  - npsp__Matching_Gift_Status__c
+  - npsp__Notification_Message__c
+  - npsp__Notification_Preference__c
+  - npsp__Notification_Recipient_Information__c
+  - npsp__Notification_Recipient_Name__c
+  - npsp__Primary_Contact_Campaign_Member_Status__c
+  - npsp__Qualified_Date__c
+  - npsp__Recurring_Donation_Installment_Number__c
+  - npsp__Requested_Amount__c
+  - npsp__Tribute_Type__c
+  - taxReceipt_Addtnl_Rcpt_Data_Valid_Result__c
+  - taxReceipt_Auto_Generation_Delay_Days__c
+  - taxReceipt_Benefit_Advantage_Unknown__c
+  - taxReceipt_Fund_Business_Numbers__c
+  - taxReceipt_In_Kind_Description__c
+  - taxReceipt_Primary_Tax_Data_Valid_Result__c
+  - taxReceipt_RCAV_Receiptable_C1_Result__c
+  - zField_of_Inconsequence__c
+  lookups:
+    AccountId:
+      table: Account
+    CampaignId:
+      table: Campaign
+    Collected_for_Parish__c:
+      table: Account
+    ContactId:
+      table: Contact
+    ContractId:
+      table: Contract
+    Latest_iATS_Transaction__c:
+      table: IATSPayment__Transaction__c
+    iATS_Customer_Code__c:
+      table: IATSPayment__IATS_Customer_Code__c
+    kell6_core__Opportunity_Group__c:
+      table: kell6_core__Opportunity_Group__c
+      after: Insert kell6_core__Opportunity_Group__c
+    kell6_core__Receipt_Acknowledgement__c:
+      table: kell6_core__Receipt__c
+      after: Insert kell6_core__Receipt__c
+    kell6_core__Receipt_Contact__c:
+      table: Contact
+    npe03__Recurring_Donation__c:
+      table: npe03__Recurring_Donation__c
+    npsp__Batch__c:
+      table: npsp__Batch__c
+    npsp__Honoree_Contact__c:
+      table: Contact
+    npsp__Matching_Gift_Account__c:
+      table: Account
+    npsp__Matching_Gift__c:
+      table: Opportunity
+      after: Insert Opportunity
+    npsp__Notification_Recipient_Contact__c:
+      table: Contact
+    npsp__Previous_Grant_Opportunity__c:
+      table: Opportunity
+      after: Insert Opportunity
+    npsp__Primary_Contact__c:
+      table: Contact
+Insert kell6_core__Receipt__c:
+  sf_object: kell6_core__Receipt__c
+  fields:
+  - Account_Type__c
+  - Business_Numbers_Override__c
+  - Date_Received__c
+  - Fund_Name_s__c
+  - Name
+  - RCAV_Type__c
+  - Receipt_Name__c
+  - RecordTypeId
+  - Template_Used__c
+  - kell6_core__Appraiser_Details__c
+  - kell6_core__Benefit_Value__c
+  - kell6_core__Billing_Address__c
+  - kell6_core__Billing_City__c
+  - kell6_core__Billing_Country__c
+  - kell6_core__Billing_Postal_Code__c
+  - kell6_core__Billing_State__c
+  - kell6_core__Billing_Street__c
+  - kell6_core__Campaign_Name__c
+  - kell6_core__Date_of_Issue__c
+  - kell6_core__Description__c
+  - kell6_core__Do_Not_Email__c
+  - kell6_core__Donation_Date__c
+  - kell6_core__Donor_s_Email__c
+  - kell6_core__Donor_s_Household_Name__c
+  - kell6_core__Donor_s_Name__c
+  - kell6_core__Email_Sent__c
+  - kell6_core__Legacy_Receipt_Name__c
+  - kell6_core__Print_Batch_Name__c
+  - kell6_core__Receipt_Error__c
+  - kell6_core__Receipted_Amount__c
+  - kell6_core__Receipted_Status__c
+  - kell6_core__Receipted_Year__c
+  - kell6_core__Tax_Deductible_Amount__c
+  - kell6_core__Type__c
+  - kell6_core__Voided_Date__c
+  - taxReceipt_Benefit_Advantage_Unknown__c
+  lookups:
+    Receipt_Account__c:
+      table: Account
+    kell6_core__Opportunity__c:
+      table: Opportunity
+    kell6_core__Original_Receipt__c:
+      table: kell6_core__Receipt__c
+      after: Insert kell6_core__Receipt__c
+    kell6_core__Receipt_Contact__c:
+      table: Contact
+    kell6_core__Receipt_Template_Assignment__c:
+      table: kell6_core__Receipt_Template_Assignment__c
+    kell6_core__Replaced_By__c:
+      table: kell6_core__Receipt__c
+      after: Insert kell6_core__Receipt__c
+    kell6_core__Replaced_Receipt__c:
+      table: kell6_core__Receipt__c
+      after: Insert kell6_core__Receipt__c
+Insert npe01__OppPayment__c:
+  sf_object: npe01__OppPayment__c
+  fields:
+  - npe01__Check_Reference_Number__c
+  - npe01__Custom_Payment_Field__c
+  - npe01__Paid__c
+  - npe01__Payment_Amount__c
+  - npe01__Payment_Date__c
+  - npe01__Payment_Method__c
+  - npe01__Scheduled_Date__c
+  - npe01__Written_Off__c
+  - npsp__Authorized_Date__c
+  - npsp__Authorized_UTC_Timestamp__c
+  - npsp__Batch_Number__c
+  - npsp__Card_Expiration_Month__c
+  - npsp__Card_Expiration_Year__c
+  - npsp__Card_Last_4__c
+  - npsp__Card_Network__c
+  - npsp__Donor_Cover_Amount__c
+  - npsp__Elevate_Original_Payment_ID__c
+  - npsp__Elevate_Payment_Created_Date__c
+  - npsp__Elevate_Payment_Created_UTC_Timestamp__c
+  - npsp__Elevate_Payment_ID__c
+  - npsp__Gateway_ID__c
+  - npsp__Gateway_Payment_ID__c
+  - npsp__Origin_ID__c
+  - npsp__Origin_Name__c
+  - npsp__Origin_Type__c
+  - npsp__Payment_Acknowledged_Date__c
+  - npsp__Payment_Acknowledgment_Status__c
+  - npsp__Type__c
+  lookups:
+    npe01__Opportunity__c:
+      table: Opportunity
+Insert npsp__Engagement_Plan__c:
+  sf_object: npsp__Engagement_Plan__c
+  fields:
+  - npsp__Completed_Tasks__c
+  - npsp__Total_Tasks__c
+  lookups:
+    Program_Engagement__c:
+      table: pmdm__ProgramEngagement__c
+    npsp__Account__c:
+      table: Account
+    npsp__Campaign__c:
+      table: Campaign
+    npsp__Case__c:
+      table: Case
+    npsp__Contact__c:
+      table: Contact
+    npsp__Engagement_Plan_Template__c:
+      table: npsp__Engagement_Plan_Template__c
+    npsp__Opportunity__c:
+      table: Opportunity
+    npsp__Recurring_Donation__c:
+      table: npe03__Recurring_Donation__c
+Insert kell6_core__Opportunity_Group__c:
+  sf_object: kell6_core__Opportunity_Group__c
+  fields:
+  - Name
+  - RecordTypeId
+  - kell6_core__Amount__c
+  - kell6_core__Appraiser_Details__c
+  - kell6_core__Benefit_Value__c
+  - kell6_core__Do_Not_Receipt__c
+  - kell6_core__Effective_Date__c
+  - kell6_core__External_Receipt_Number__c
+  - kell6_core__Last_Receipt_Date__c
+  - kell6_core__Legacy_Receipt_Number__c
+  - kell6_core__Receipted__c
+  - kell6_core__Tax_Receipt_Description__c
+  - kell6_core__Total_Receipted_Amount__c
+  - kell6_core__Type__c
+  lookups:
+    kell6_core__Campaign__c:
+      table: Campaign
+    kell6_core__Last_Receipt__c:
+      table: kell6_core__Receipt__c
+    kell6_core__Receipt_Account__c:
+      table: Account
+    kell6_core__Receipt_Contact__c:
+      table: Contact
+Insert npsp__Allocation__c:
+  sf_object: npsp__Allocation__c
+  fields:
+  - npsp__Amount__c
+  - npsp__Percent__c
+  lookups:
+    npsp__Campaign__c:
+      table: Campaign
+    npsp__General_Accounting_Unit__c:
+      table: npsp__General_Accounting_Unit__c
+    npsp__Opportunity__c:
+      table: Opportunity
+    npsp__Payment__c:
+      table: npe01__OppPayment__c
+    npsp__Recurring_Donation__c:
+      table: npe03__Recurring_Donation__c
+Insert kell6_core__Receipt_Installment__c:
+  sf_object: kell6_core__Receipt_Installment__c
+  fields:
+  - kell6_core__Type__c
+  lookups:
+    kell6_core__Opportunity_Group__c:
+      table: kell6_core__Opportunity_Group__c
+    kell6_core__Opportunity__c:
+      table: Opportunity
+    kell6_core__Receipt__c:
+      table: kell6_core__Receipt__c
+Insert npsp__DataImport__c:
+  sf_object: npsp__DataImport__c
+  fields:
+  - ACH_Direct_Debit_Account_Type__c
+  - ACH_Direct_Debit_Bank_Numbers__c
+  - Anonymous_Donation__c
+  - Bypass_Validation_Rules__c
+  - CC_Expiry_Date__c
+  - CC_Number__c
+  - Cheque_Date__c
+  - Contact1_Address_Override__c
+  - Contact1_Birth_City_Province__c
+  - Contact1_Country_of_Birth__c
+  - Contact1_Gender__c
+  - Contact1_UCI__c
+  - Contact2_Address_Override__c
+  - Contact2_Birth_City_Province__c
+  - Contact2_Country_of_Birth__c
+  - Contact2_Gender__c
+  - Contact2_UCI__c
+  - Credit_Card_Type__c
+  - DRF_Ref__c
+  - Do_Not_Receipt__c
+  - Donation_Donor_Comments__c
+  - Donation_Envelope_Number__c
+  - Donation_Source__c
+  - Home_Address_Override__c
+  - Method_of_Payment__c
+  - Payment_Methods__c
+  - ProgEng_ConstituentGroup__c
+  - ProgEng_Govt_Appl__c
+  - ProgEng_Import_Status__c
+  - ProgEng_Legacy_Notes__c
+  - ProgEng_Record_Type_ID__c
+  - ProgEng_Role__c
+  - ProgEng_Stage__c
+  - ProgEng_Start_Date__c
+  - Prog_Visa_Office__c
+  - Reference__c
+  - Relationship_1_Import_Status__c
+  - Relationship_1_Type__c
+  - Reminder_Date__c
+  - Reminder_Status__c
+  - iATS_Zip_Postal_Code__c
+  - npsp__ACH_Consent__c
+  - npsp__Account1ImportStatus__c
+  - npsp__Account1_City__c
+  - npsp__Account1_Country__c
+  - npsp__Account1_Name__c
+  - npsp__Account1_Phone__c
+  - npsp__Account1_State_Province__c
+  - npsp__Account1_Street__c
+  - npsp__Account1_Website__c
+  - npsp__Account1_Zip_Postal_Code__c
+  - npsp__Account2ImportStatus__c
+  - npsp__Account2_City__c
+  - npsp__Account2_Country__c
+  - npsp__Account2_Name__c
+  - npsp__Account2_Phone__c
+  - npsp__Account2_State_Province__c
+  - npsp__Account2_Street__c
+  - npsp__Account2_Website__c
+  - npsp__Account2_Zip_Postal_Code__c
+  - npsp__Additional_Object_JSON__c
+  - npsp__ApexJobId__c
+  - npsp__Campaign_Member_Status__c
+  - npsp__Contact1ImportStatus__c
+  - npsp__Contact1_Alternate_Email__c
+  - npsp__Contact1_Birthdate__c
+  - npsp__Contact1_Consent_Message__c
+  - npsp__Contact1_Consent_Opt_In__c
+  - npsp__Contact1_Firstname__c
+  - npsp__Contact1_Home_Phone__c
+  - npsp__Contact1_Lastname__c
+  - npsp__Contact1_Mobile_Phone__c
+  - npsp__Contact1_Other_Phone__c
+  - npsp__Contact1_Personal_Email__c
+  - npsp__Contact1_Preferred_Email__c
+  - npsp__Contact1_Preferred_Phone__c
+  - npsp__Contact1_Salutation__c
+  - npsp__Contact1_Title__c
+  - npsp__Contact1_Work_Email__c
+  - npsp__Contact1_Work_Phone__c
+  - npsp__Contact2ImportStatus__c
+  - npsp__Contact2_Alternate_Email__c
+  - npsp__Contact2_Birthdate__c
+  - npsp__Contact2_Firstname__c
+  - npsp__Contact2_Home_Phone__c
+  - npsp__Contact2_Lastname__c
+  - npsp__Contact2_Mobile_Phone__c
+  - npsp__Contact2_Other_Phone__c
+  - npsp__Contact2_Personal_Email__c
+  - npsp__Contact2_Preferred_Email__c
+  - npsp__Contact2_Preferred_Phone__c
+  - npsp__Contact2_Salutation__c
+  - npsp__Contact2_Title__c
+  - npsp__Contact2_Work_Email__c
+  - npsp__Contact2_Work_Phone__c
+  - npsp__DonationCampaignImportStatus__c
+  - npsp__DonationImportStatus__c
+  - npsp__Donation_Amount__c
+  - npsp__Donation_Campaign_Name__c
+  - npsp__Donation_Date__c
+  - npsp__Donation_Description__c
+  - npsp__Donation_Donor__c
+  - npsp__Donation_Elevate_Recurring_ID__c
+  - npsp__Donation_Member_Level__c
+  - npsp__Donation_Membership_End_Date__c
+  - npsp__Donation_Membership_Origin__c
+  - npsp__Donation_Membership_Start_Date__c
+  - npsp__Donation_Name__c
+  - npsp__Donation_Possible_Matches__c
+  - npsp__Donation_Record_Type_Name__c
+  - npsp__Donation_Stage__c
+  - npsp__Donation_Type__c
+  - npsp__Elevate_Custom_Metadata__c
+  - npsp__FailureInformation__c
+  - npsp__GAU_Allocation_1_Amount__c
+  - npsp__GAU_Allocation_1_Import_Status__c
+  - npsp__GAU_Allocation_1_Percent__c
+  - npsp__GAU_Allocation_2_Amount__c
+  - npsp__GAU_Allocation_2_Import_Status__c
+  - npsp__GAU_Allocation_2_Percent__c
+  - npsp__HomeAddressImportStatus__c
+  - npsp__Home_City__c
+  - npsp__Home_Country__c
+  - npsp__Home_State_Province__c
+  - npsp__Home_Street__c
+  - npsp__Home_Zip_Postal_Code__c
+  - npsp__Household_Phone__c
+  - npsp__ImportedDate__c
+  - npsp__Opportunity_Contact_Role_1_ImportStatus__c
+  - npsp__Opportunity_Contact_Role_1_Imported__c
+  - npsp__Opportunity_Contact_Role_1_Role__c
+  - npsp__Opportunity_Contact_Role_2_ImportStatus__c
+  - npsp__Opportunity_Contact_Role_2_Imported__c
+  - npsp__Opportunity_Contact_Role_2_Role__c
+  - npsp__PaymentImportStatus__c
+  - npsp__Payment_ACH_Code__c
+  - npsp__Payment_ACH_Last_4__c
+  - npsp__Payment_Authorization_Token__c
+  - npsp__Payment_Authorized_Date__c
+  - npsp__Payment_Authorized_UTC_Timestamp__c
+  - npsp__Payment_Card_Expiration_Month__c
+  - npsp__Payment_Card_Expiration_Year__c
+  - npsp__Payment_Card_Last_4__c
+  - npsp__Payment_Card_Network__c
+  - npsp__Payment_Check_Reference_Number__c
+  - npsp__Payment_Declined_Reason__c
+  - npsp__Payment_Donor_Cover_Amount__c
+  - npsp__Payment_Elevate_Created_Date__c
+  - npsp__Payment_Elevate_Created_UTC_Timestamp__c
+  - npsp__Payment_Elevate_ID__c
+  - npsp__Payment_Elevate_Original_Payment_ID__c
+  - npsp__Payment_Gateway_ID__c
+  - npsp__Payment_Gateway_Payment_ID__c
+  - npsp__Payment_Method__c
+  - npsp__Payment_Origin_ID__c
+  - npsp__Payment_Origin_Name__c
+  - npsp__Payment_Origin_Type__c
+  - npsp__Payment_Possible_Matches__c
+  - npsp__Payment_Status__c
+  - npsp__Payment_Type__c
+  - npsp__Status__c
+  lookups:
+    Contact1_HomeParish__c:
+      table: Account
+    Contact2_HomeParish__c:
+      table: Account
+    Donation_Parish_Collected_by__c:
+      table: Account
+    ProgEng_Client__c:
+      table: Contact
+    ProgEng_Household__c:
+      table: Account
+    ProgEng_Imported__c:
+      table: pmdm__ProgramEngagement__c
+    ProgEng_Program_Cohort__c:
+      table: pmdm__ProgramCohort__c
+    ProgEng_Program__c:
+      table: pmdm__Program__c
+    Relationship_1_Imported__c:
+      table: npe4__Relationship__c
+    iATS_Customer_Code__c:
+      table: IATSPayment__IATS_Customer_Code__c
+    npsp__Account1Imported__c:
+      table: Account
+    npsp__Account2Imported__c:
+      table: Account
+    npsp__Contact1Imported__c:
+      table: Contact
+    npsp__Contact2Imported__c:
+      table: Contact
+    npsp__DonationCampaignImported__c:
+      table: Campaign
+    npsp__DonationImported__c:
+      table: Opportunity
+    npsp__GAU_Allocation_1_GAU__c:
+      table: npsp__General_Accounting_Unit__c
+    npsp__GAU_Allocation_1_Imported__c:
+      table: npsp__Allocation__c
+    npsp__GAU_Allocation_2_GAU__c:
+      table: npsp__General_Accounting_Unit__c
+    npsp__GAU_Allocation_2_Imported__c:
+      table: npsp__Allocation__c
+    npsp__HomeAddressImported__c:
+      table: npsp__Address__c
+    npsp__HouseholdAccountImported__c:
+      table: Account
+    npsp__NPSP_Data_Import_Batch__c:
+      table: npsp__DataImportBatch__c
+    npsp__PaymentImported__c:
+      table: npe01__OppPayment__c
