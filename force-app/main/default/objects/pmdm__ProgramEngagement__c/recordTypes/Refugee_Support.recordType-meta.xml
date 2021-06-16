@@ -3,8 +3,7 @@
     <fullName>Refugee_Support</fullName>
     <active>true</active>
     <compactLayoutAssignment>Refugee_Compact_Layout</compactLayoutAssignment>
-    <description>For tracking individual and family applicants to the Canadian refugee immigration program.</description>
-    <label>Refugee Support</label>
+    <label>Refugee Program</label>
     <picklistValues>
         <picklist>pmdm__Role__c</picklist>
         <values>
