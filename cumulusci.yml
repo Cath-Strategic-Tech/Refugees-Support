@@ -107,6 +107,20 @@ tasks:
 
 
 flows:
+    install_uat:
+        steps:
+            1:
+                task: add_pmm_engagement_stages
+            2:
+                task: install_managed_beta
+            3:
+                task: assign_permission_sets
+                options:
+                    api_names:
+                        - Refugees_Program
+            4:
+                task: deploy_npspdataloader_fields
+      
     dependencies:
         steps:
             3:
