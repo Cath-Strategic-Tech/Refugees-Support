@@ -118,9 +118,7 @@ flows:
                 options:
                     api_names:
                         - Refugees_Program
-            4:
-                task: deploy_npspdataloader_fields
-      
+    
     dependencies:
         steps:
             3:
