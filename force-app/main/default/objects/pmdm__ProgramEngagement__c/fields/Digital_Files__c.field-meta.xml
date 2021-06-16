@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digital_Files__c</fullName>
+    <description>Clickable link to access the digital file for the Refugee Sponsorship Application.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Clickable link to access the digital file for the Refugee Sponsorship Application.</inlineHelpText>
+    <label>Digital Files</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>
