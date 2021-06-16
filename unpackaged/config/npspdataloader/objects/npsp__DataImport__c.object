@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
-        <fullName>Contact1_Birth_City_Province__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact1 Birth City, Province</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact1_Country_of_Birth__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact1 Country of Birth</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact1_Gender__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact1 Gender</label>
-        <length>10</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact1_HomeParish__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Contact1 Home Parish</label>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>NPSP Data Imports (Contact1 Home Parish)</relationshipLabel>
-        <relationshipName>NPSP_Data_Imports</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Contact1_UCI__c</fullName>
         <externalId>false</externalId>
         <label>Contact1 UCI</label>
@@ -51,48 +9,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact2_Birth_City_Province__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact2 Birth City, Province</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact2_Country_of_Birth__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact2 Country of Birth</label>
-        <length>100</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact2_Gender__c</fullName>
-        <externalId>false</externalId>
-        <label>Contact2 Gender</label>
-        <length>10</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Contact2_HomeParish__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Contact2 Home Parish</label>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>NPSP Data Imports (Contact2 Home Parish)</relationshipLabel>
-        <relationshipName>NPSP_Data_Imports1</relationshipName>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Contact2_UCI__c</fullName>
