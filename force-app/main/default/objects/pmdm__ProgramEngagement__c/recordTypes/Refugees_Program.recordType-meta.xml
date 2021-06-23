@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Refugee_Support</fullName>
+    <fullName>Refugees_Program</fullName>
     <active>true</active>
     <compactLayoutAssignment>Refugee_Compact_Layout</compactLayoutAssignment>
-    <label>Refugee Program</label>
+    <label>Refugees Program</label>
     <picklistValues>
         <picklist>pmdm__Role__c</picklist>
         <values>
