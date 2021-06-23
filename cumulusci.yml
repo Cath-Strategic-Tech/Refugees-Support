@@ -77,7 +77,7 @@ tasks:
         class_path: cumulusci.tasks.salesforce.UpdateAdminProfile
         options:
             record_types:
-                - record_type: pmdm__ProgramEngagement__c.Refugee_Support
+                - record_type: pmdm__ProgramEngagement__c.Refugees_Program
                   default: true
 
     uninstall_packaged_incremental:
