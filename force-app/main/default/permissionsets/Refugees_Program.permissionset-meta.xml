@@ -117,7 +117,7 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <recordTypeVisibilities>
-        <recordType>pmdm__ProgramEngagement__c.Refugee_Support</recordType>
+        <recordType>pmdm__ProgramEngagement__c.Refugees_Program</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <tabSettings>

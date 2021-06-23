@@ -3,6 +3,6 @@
     <active>true</active>
     <entityName>pmdm__ProgramEngagement__c</entityName>
     <fieldName>pmdm__Stage__c</fieldName>
-    <masterLabel>Refugees Support Path</masterLabel>
-    <recordTypeName>Refugee_Support</recordTypeName>
+    <masterLabel>Refugees Program Path</masterLabel>
+    <recordTypeName>Refugees_Program</recordTypeName>
 </PathAssistant>
