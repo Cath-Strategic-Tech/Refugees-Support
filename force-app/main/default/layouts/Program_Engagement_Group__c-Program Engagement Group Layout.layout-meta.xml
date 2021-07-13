@@ -60,13 +60,13 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>pmdm__Contact__c</fields>
+        <fields>Main_PA_in_Group__c</fields>
         <fields>G_Number__c</fields>
         <fields>pmdm__Stage__c</fields>
         <fields>Visa_Office__c</fields>
-        <fields>pmdm__ApplicationDate__c</fields>
-        <fields>Total_Support_Required__c</fields>
-        <fields>pmdm__StartDate__c</fields>
         <relatedList>pmdm__ProgramEngagement__c.Program_Engagement_Group__c</relatedList>
+        <sortField>Main_PA_in_Group__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
