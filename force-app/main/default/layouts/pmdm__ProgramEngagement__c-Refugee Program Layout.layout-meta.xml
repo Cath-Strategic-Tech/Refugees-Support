@@ -28,7 +28,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Refuge_CoSponsor_B__c</field>
+                <field>Main_PA_in_Group__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -43,6 +43,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Refuge_CoSponsor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Refuge_CoSponsor_B__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
