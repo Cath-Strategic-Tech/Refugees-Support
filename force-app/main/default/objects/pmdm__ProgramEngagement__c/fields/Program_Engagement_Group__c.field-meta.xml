@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Engagement_Group__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to a Program Engagement Group that represents linked individual Program Engagements, usually because adults from different households need to tracked as related in their involvement in a particular program.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Program Engagement Group object helps track adults from different households whose program involvement needs to tracked as related in relation to one another.</inlineHelpText>
+    <label>Program Engagement Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Group&apos;s Program does not match the Program of the Program Engagement.</errorMessage>
+        <filterItems>
+            <field>Program_Engagement_Group__c.Program__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.pmdm__Program__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Program_Engagement_Group__c</referenceTo>
+    <relationshipLabel>Linked Program Engagements</relationshipLabel>
+    <relationshipName>Program_Engagements</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
