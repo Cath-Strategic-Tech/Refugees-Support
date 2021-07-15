@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_PA_in_Group__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Only applicable in the case where a Program Engagement is linked to a Program Engagement Group.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only applicable in the case where a Program Engagement is linked to a Program Engagement Group.</inlineHelpText>
+    <label>Main PA in Group</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
