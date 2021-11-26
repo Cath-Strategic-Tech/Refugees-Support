@@ -10,8 +10,13 @@ assignees: ''
 **Is this capability related to a particular job or business process? Please provide background...**
 A clear and concise description of what the business scenario is. Ex. User A routinely receives requests to [...]
 
+
 **Acceptance Criteria**
 A list of conditions or results that must be true in order for the above User to be satisfied with the new software capability.
+- 
+- 
+- 
+
 
 -----To be completed by Engineering-----
 
@@ -20,3 +25,6 @@ A working description of the technical solution to be implemented, including any
 
 **Test Case**
 A description of what QA testing is required in order to ensure this user story can be publicly released.
+- [ ]
+- [ ]
+- [ ]
