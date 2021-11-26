@@ -1,7 +1,7 @@
 ---
 name: User Story
 about: Document a software-related capability that users need
-title: As a [ROLE] I want to be able to [CAPABILITY] so that [RESULT]
+title: As a [ROLE] I want to be able to [CAPABILITY] so that [END RESULT]
 labels: user story
 assignees: ''
 
@@ -13,8 +13,10 @@ A clear and concise description of what the business scenario is. Ex. User A rou
 **Acceptance Criteria**
 A list of conditions or results that must be true in order for the above User to be satisfied with the new software capability.
 
+-----To be completed by Engineering-----
+
 **Technical Solution**
-*To be completed by the Engineering Team when work on this ticket is underway.*
+A working description of the technical solution to be implemented, including any architectural decisions made along the way.
 
 **Test Case**
-A description of the QA testing required to ensure this user story can be publically released. *To be completed by the Engineering Team when work on this ticket is underway.*
+A description of what QA testing is required in order to ensure this user story can be publicly released.
