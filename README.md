@@ -1,12 +1,3 @@
-# Refugees-Support
+# Refugees Support 
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
-
-## Development
-
-To work on this project in a scratch org:
-
-1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
-2. Run `cci flow run dev_org --org dev` to deploy this project.
-3. Run `cci org browser dev` to open the org in your browser.
+The Refugees Support Application project develops and supports a CRM and program management solution for Canadian organizations sponsoring international refugees under the [Private Sponsorship of Refugees (PSR) program](https://www.rstp.ca/en/refugee-sponsorship/the-private-sponsorship-of-refugees-program/). The project's application is built on the Salesforce CRM platform and extends both Salesforce.org's Nonprofit Success Pack and Program Management Module.
