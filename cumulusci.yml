@@ -8,6 +8,9 @@ project:
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/PMM'
         - github: 'https://github.com/SalesforceFoundation/Relationships'
+        - version_id: 04t6F000000cgcYQAQ
+        - version_id: 04t5G000003rUfHQAU
+
     git:
         default_branch: ''
     source_format: sfdx
