@@ -1075,7 +1075,7 @@
             <targetReference>S02_PrincipalApplicant</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <name>varT_template_HHAccountName</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
