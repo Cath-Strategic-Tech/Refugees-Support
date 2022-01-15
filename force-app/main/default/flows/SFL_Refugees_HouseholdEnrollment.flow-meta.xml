@@ -2,85 +2,245 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>53.0</apiVersion>
     <assignments>
+        <name>SET_HHAccount_Name</name>
+        <label>SET HHAccount Name</label>
+        <locationX>710</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHAccount.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varT_template_HHAccountName</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CREATE_HHAccount</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SET_HHContact</name>
+        <label>SET HHContact</label>
+        <locationX>50</locationX>
+        <locationY>1358</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.FirstName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHContactName.firstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.LastName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHContactName.lastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.Birthdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHContact_Birthday</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GET_PAContact.Account.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CREATE_HHContact</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <description>Sets the PA Contact variable based on Screen inputs.</description>
         <name>SET_PA_Contact</name>
         <label>SET_PA_Contact</label>
-        <locationX>176</locationX>
-        <locationY>278</locationY>
+        <locationX>710</locationX>
+        <locationY>518</locationY>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.FirstName</assignToReference>
+            <assignToReference>var_sObj_PAContact.FirstName</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PAName.firstName</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.LastName</assignToReference>
+            <assignToReference>var_sObj_PAContact.LastName</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PAName.lastName</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.MailingCity</assignToReference>
+            <assignToReference>var_sObj_PAContact.MailingCity</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_CurrentAddress.city</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.MailingCountry</assignToReference>
+            <assignToReference>var_sObj_PAContact.MailingCountry</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_CurrentAddress.country</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.MailingPostalCode</assignToReference>
+            <assignToReference>var_sObj_PAContact.MailingPostalCode</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_CurrentAddress.postalCode</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.MailingState</assignToReference>
+            <assignToReference>var_sObj_PAContact.MailingState</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_CurrentAddress.province</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.MailingStreet</assignToReference>
+            <assignToReference>var_sObj_PAContact.MailingStreet</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_CurrentAddress.street</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.Email</assignToReference>
+            <assignToReference>var_sObj_PAContact.Email</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_Email_Home.value</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.UCI__c</assignToReference>
+            <assignToReference>var_sObj_PAContact.UCI__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_UCI</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>var_sObj_PrincipleApplicant.Birthdate</assignToReference>
+            <assignToReference>var_sObj_PAContact.Birthdate</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>var_PA_Birthdate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_PAContact.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_HHAccount.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
             <targetReference>CREATE_PAContact</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>SET_RelationshipToPA</name>
+        <label>SET RelationshipToPA</label>
+        <locationX>50</locationX>
+        <locationY>1598</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_RelationshipToPA.npe4__Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_RelationshipToPA.npe4__RelatedContact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_HHContact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_RelationshipToPA.npe4__Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_picklist_RelationshipType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_RelationshipToPA.npe4__Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Current</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CREATE_RelationshipToPA</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>var_MoreHHMembers_No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>false</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>var_MoreHHMembers_Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>true</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>CHECK_AddHHMembers</name>
+        <label>CHECK_AddHHMembers</label>
+        <locationX>710</locationX>
+        <locationY>878</locationY>
+        <defaultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Error</defaultConnectorLabel>
+        <rules>
+            <name>CHECK_AddHHMembers_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ch_AddMoreHHMembers</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MoreHHMembers_Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GET_PAContact</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+        <rules>
+            <name>CHECK_AddHHMembers_No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ch_AddMoreHHMembers</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MoreHHMembers_No</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GET_Household_Members_Final</targetReference>
+            </connector>
+            <label>No</label>
+        </rules>
+    </decisions>
     <description>Screen Flow to support creating a Household of Contacts and enrolling them in the Refugees Program (PMM).</description>
     <dynamicChoiceSets>
         <name>var_picklist_RelationshipType</name>
@@ -112,25 +272,157 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
+        <name>CREATE_HHAccount</name>
+        <label>CREATE HHAccount</label>
+        <locationX>710</locationX>
+        <locationY>398</locationY>
+        <connector>
+            <targetReference>SET_PA_Contact</targetReference>
+        </connector>
+        <inputReference>var_sObj_HHAccount</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>CREATE_HHContact</name>
+        <label>CREATE HHContact</label>
+        <locationX>50</locationX>
+        <locationY>1478</locationY>
+        <connector>
+            <targetReference>SET_RelationshipToPA</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputReference>var_sObj_HHContact</inputReference>
+    </recordCreates>
+    <recordCreates>
         <name>CREATE_PAContact</name>
         <label>CREATE PA Contact</label>
-        <locationX>176</locationX>
-        <locationY>398</locationY>
+        <locationX>710</locationX>
+        <locationY>638</locationY>
+        <connector>
+            <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputReference>var_sObj_PAContact</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>CREATE_RelationshipToPA</name>
+        <label>CREATE RelationshipToPA</label>
+        <locationX>50</locationX>
+        <locationY>1718</locationY>
+        <connector>
+            <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputReference>var_sObj_RelationshipToPA</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>GET_Household_Members</name>
+        <label>GET Household Members</label>
+        <locationX>50</locationX>
+        <locationY>1118</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>S03_HouseholdMember</targetReference>
         </connector>
-        <inputReference>var_sObj_PrincipleApplicant</inputReference>
-    </recordCreates>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GET_PAContact.Account.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Contact</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GET_Household_Members_Final</name>
+        <label>GET Household Members Final</label>
+        <locationX>1106</locationX>
+        <locationY>998</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GET_RelationshipsToPA</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GET_PAContact.Account.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Contact</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GET_PAContact</name>
+        <label>GET_PAContact</label>
+        <locationX>50</locationX>
+        <locationY>998</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GET_Household_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GET_RelationshipsToPA</name>
+        <label>GET RelationshipsToPA</label>
+        <locationX>1106</locationX>
+        <locationY>1118</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>S05_Confirmation_Screen_0</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>npe4__Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>npe4__Relationship__c</object>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <screens>
         <name>S02_PrincipalApplicant</name>
         <label>S02_PrincipalApplicant</label>
-        <locationX>176</locationX>
+        <locationX>710</locationX>
         <locationY>158</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>SET_PA_Contact</targetReference>
+            <targetReference>SET_HHAccount_Name</targetReference>
         </connector>
         <fields>
             <name>varT_PrincipalApplicant</name>
@@ -293,16 +585,155 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>S03_HouseholdMember</name>
-        <label>S03_HouseholdMember</label>
-        <locationX>176</locationX>
-        <locationY>518</locationY>
+        <description>As if the user wants to add additional members.</description>
+        <name>S03_AddAdditionalHouseholdMembers</name>
+        <label>Additional Household Members?</label>
+        <locationX>710</locationX>
+        <locationY>758</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CHECK_AddHHMembers</targetReference>
+        </connector>
         <fields>
-            <name>varT_HouseholdMember</name>
-            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Household Member&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <name>ch_AddMoreHHMembers</name>
+            <choiceReferences>var_MoreHHMembers_Yes</choiceReferences>
+            <choiceReferences>var_MoreHHMembers_No</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Would you like to add another Household Member to the Refugee application??</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>S03_HouseholdMember</name>
+        <label>S03_HouseholdMember</label>
+        <locationX>50</locationX>
+        <locationY>1238</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>SET_HHContact</targetReference>
+        </connector>
+        <fields>
+            <name>varT_HouseholdMembersSection</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 20px;&quot;&gt;Household Members&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>var_List_HouseholdMembers</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>Contact</typeValue>
+            </dataTypeMappings>
+            <extensionName>c:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>objectName</name>
+                <value>
+                    <stringValue>Contact</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>GET_Household_Members</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isDisplayHeader</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_isDisplayHeader</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableLabel</name>
+                <value>
+                    <stringValue>Contacts</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableIcon</name>
+                <value>
+                    <stringValue>standard:contact</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showRowNumbers</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_showRowNumbers</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>hideCheckboxColumn</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_hideCheckboxColumn</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_isRequired</name>
+                <value>
+                    <stringValue>CB_FALSE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_singleRowSelection</name>
+                <value>
+                    <stringValue>CB_FALSE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnEdits</name>
+                <value>
+                    <stringValue>All</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnFields</name>
+                <value>
+                    <stringValue>Name,Birthdate,Email,MailingCountry</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_matchCaseOnFilters</name>
+                <value>
+                    <stringValue>CB_FALSE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnWidths</name>
+                <value>
+                    <stringValue>Name:188, Birthdate:188, Email:188, MailingCountry:188</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>varT_NewHouseholdMemberSection</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Add Household Member&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -342,14 +773,11 @@
                 <name>S03_HouseholdMember_Section1_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <fieldType>ObjectProvided</fieldType>
+                    <name>var_HHContact_Birthday</name>
+                    <dataType>Date</dataType>
+                    <fieldText>var_HHContact_Birthday</fieldText>
+                    <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
-                    <objectFieldReference>var_sObj_PrincipleApplicant.Birthdate</objectFieldReference>
-                </fields>
-                <fields>
-                    <fieldType>ObjectProvided</fieldType>
-                    <isRequired>false</isRequired>
-                    <objectFieldReference>var_sObj_PrincipleApplicant.UCI__c</objectFieldReference>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -375,17 +803,6 @@
                     <fieldType>DropdownBox</fieldType>
                     <isRequired>true</isRequired>
                 </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>S03_HouseholdMember_Section2_Column2</name>
-                <fieldType>Region</fieldType>
                 <fields>
                     <name>var_ContactLivesWithPA</name>
                     <extensionName>flowruntime:toggle</extensionName>
@@ -425,6 +842,17 @@
                 </inputParameters>
                 <isRequired>false</isRequired>
             </fields>
+            <fields>
+                <name>S03_HouseholdMember_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
             <isRequired>false</isRequired>
         </fields>
         <fields>
@@ -439,90 +867,231 @@
                     <leftValueReference>var_ContactLivesWithPA.value</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
-                        <booleanValue>true</booleanValue>
+                        <booleanValue>false</booleanValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
         </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>S05_Confirmation_Screen_0</name>
+        <label>Review Household</label>
+        <locationX>1106</locationX>
+        <locationY>1238</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
         <fields>
-            <name>S03_HouseholdMember_Section3</name>
-            <fieldType>RegionContainer</fieldType>
-            <fields>
-                <name>S03_HouseholdMember_Section3_Column1</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>var_HHMember_Phone_Home</name>
-                    <extensionName>flowruntime:phone</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Home Phone</stringValue>
-                        </value>
-                    </inputParameters>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <fields>
-                    <name>var_HHMember_Phone_Mobile</name>
-                    <extensionName>flowruntime:phone</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Mobile Phone</stringValue>
-                        </value>
-                    </inputParameters>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>S03_HouseholdMember_Section3_Column2</name>
-                <fieldType>Region</fieldType>
-                <fields>
-                    <name>var_HHMember_Email_Home</name>
-                    <extensionName>flowruntime:email</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Primary Email</stringValue>
-                        </value>
-                    </inputParameters>
-                    <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
-                </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>6</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <isRequired>false</isRequired>
+            <name>var_table_HHMembersFinal</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>Contact</typeValue>
+            </dataTypeMappings>
+            <extensionName>c:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>objectName</name>
+                <value>
+                    <stringValue>Contact</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnEdits</name>
+                <value>
+                    <stringValue>All</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnFields</name>
+                <value>
+                    <stringValue>FirstName,LastName,MailingCountry,Email,MobilePhone,UCI__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_matchCaseOnFilters</name>
+                <value>
+                    <stringValue>CB_FALSE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnWidths</name>
+                <value>
+                    <stringValue>FirstName:155, LastName:155, MailingCountry:155, Email:155, MobilePhone:155, UCI__c:155</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_showRowNumbers</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showRowNumbers</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableIcon</name>
+                <value>
+                    <stringValue>standard:contact</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isDisplayHeader</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_isDisplayHeader</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableLabel</name>
+                <value>
+                    <stringValue>Household</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>GET_Household_Members_Final</elementReference>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>var_table_RelationshipsToPA</name>
+            <dataTypeMappings>
+                <typeName>T</typeName>
+                <typeValue>npe4__Relationship__c</typeValue>
+            </dataTypeMappings>
+            <extensionName>c:datatable</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>objectName</name>
+                <value>
+                    <stringValue>npe4__Relationship__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableData</name>
+                <value>
+                    <elementReference>GET_RelationshipsToPA</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>isDisplayHeader</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_isDisplayHeader</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableLabel</name>
+                <value>
+                    <stringValue>Household Relationships</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>tableIcon</name>
+                <value>
+                    <stringValue>standard:asset_relationship</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnEdits</name>
+                <value>
+                    <stringValue>All</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnFields</name>
+                <value>
+                    <stringValue>Name,npe4__RelatedContact__c,npe4__Type__c,npe4__Relationship_Explanation__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_matchCaseOnFilters</name>
+                <value>
+                    <stringValue>CB_FALSE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnWidths</name>
+                <value>
+                    <stringValue>Name:190, npe4__RelatedContact__c:190, npe4__Type__c:172, npe4__Relationship_Explanation__c:287</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showRowNumbers</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>cb_showRowNumbers</name>
+                <value>
+                    <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>S06_FaultScreen</name>
+        <label>Fault Screen</label>
+        <locationX>1370</locationX>
+        <locationY>998</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>varT_ErrorMessage</name>
+            <fieldText>&lt;p&gt;Error: {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>584</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>S02_PrincipalApplicant</targetReference>
         </connector>
     </start>
     <status>Draft</status>
+    <textTemplates>
+        <name>varT_template_HHAccountName</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!var_PAName.lastName} ({!var_PAName.firstName}) Household</text>
+    </textTemplates>
     <variables>
-        <name>var_sObj_HouseholdMember</name>
+        <name>var_sObj_HHAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>Temp sObject for holding temp variables for creating multiple Contacts belonging to the same household.</description>
+        <name>var_sObj_HHContact</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -530,8 +1099,8 @@
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <description>Contact record variable for the Principle Applicant.</description>
-        <name>var_sObj_PrincipleApplicant</name>
+        <description>Record variable for creating the Principle Applicant&apos;s Contact record.</description>
+        <name>var_sObj_PAContact</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
