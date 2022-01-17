@@ -133,11 +133,10 @@ flows:
             3:
                 task: update_admin_profile_record_types
             4:    
-                task: assign_permission_sets
+                task: assign_permission_set_groups
                 options:
                     api_names:
-                        - Refugees_Program
-                        - USF_Flow_Screen_Component_Datatable
+                        - Refugees_Program_Management
 
     dependencies:
         steps:
