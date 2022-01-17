@@ -10,5 +10,5 @@
     <openType>sidebar</openType>
     <protected>false</protected>
     <requireRowSelection>false</requireRowSelection>
-    <url>/flow/SFL_Refugees_HouseholdEnrollment</url>
+    <url>/flow/SFL_Refugees_HouseholdEnrollment?retURL={!pmdm__ProgramEngagement__c.Id}</url>
 </WebLink>
