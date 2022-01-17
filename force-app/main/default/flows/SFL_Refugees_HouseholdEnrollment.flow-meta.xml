@@ -2,10 +2,42 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>53.0</apiVersion>
     <assignments>
+        <name>Assign_ProgEng_ID</name>
+        <label>Assign ProgEng ID</label>
+        <locationX>1326</locationX>
+        <locationY>2054</locationY>
+        <assignmentItems>
+            <assignToReference>var_NewProgEngId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_ProgramEngagement.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>S06_CongratuationsScreen</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SET_AddToCounter</name>
+        <label>SET_AddToCounter</label>
+        <locationX>50</locationX>
+        <locationY>1718</locationY>
+        <assignmentItems>
+            <assignToReference>var_Counter</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SET_RelationshipToPA</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SET_HHAccount_Name</name>
         <label>SET HHAccount Name</label>
-        <locationX>710</locationX>
-        <locationY>278</locationY>
+        <locationX>1062</locationX>
+        <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_HHAccount.Name</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +53,7 @@
         <name>SET_HHContact</name>
         <label>SET HHContact</label>
         <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationY>1478</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_HHContact.FirstName</assignToReference>
             <operator>Assign</operator>
@@ -65,8 +97,8 @@
         <description>Sets the PA Contact variable based on Screen inputs.</description>
         <name>SET_PA_Contact</name>
         <label>SET_PA_Contact</label>
-        <locationX>710</locationX>
-        <locationY>518</locationY>
+        <locationX>1062</locationX>
+        <locationY>638</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_PAContact.FirstName</assignToReference>
             <operator>Assign</operator>
@@ -149,10 +181,63 @@
         </connector>
     </assignments>
     <assignments>
+        <name>SET_ProgEng</name>
+        <label>SET_ProgEng</label>
+        <locationX>1326</locationX>
+        <locationY>1478</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__Program__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_ProgramLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__ProgramCohort__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_ProgramCohortLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__ApplicationDate__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_Today</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CHECK_HHGreaterThan1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SET_ProgEng_Household</name>
+        <label>SET_ProgEng_Household</label>
+        <locationX>1106</locationX>
+        <locationY>1718</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_HHAccount.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CREATE_ProgramEngagememt</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SET_RelationshipToPA</name>
         <label>SET RelationshipToPA</label>
         <locationX>50</locationX>
-        <locationY>1598</locationY>
+        <locationY>1838</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_RelationshipToPA.npe4__Contact__c</assignToReference>
             <operator>Assign</operator>
@@ -204,8 +289,8 @@
     <decisions>
         <name>CHECK_AddHHMembers</name>
         <label>CHECK_AddHHMembers</label>
-        <locationX>710</locationX>
-        <locationY>878</locationY>
+        <locationX>1062</locationX>
+        <locationY>998</locationY>
         <defaultConnector>
             <targetReference>S06_FaultScreen</targetReference>
         </defaultConnector>
@@ -241,6 +326,46 @@
             <label>No</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>CHECK_HHGreaterThan1</name>
+        <label>CHECK_HH Greater Than 1</label>
+        <locationX>1326</locationX>
+        <locationY>1598</locationY>
+        <defaultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>ERROR</defaultConnectorLabel>
+        <rules>
+            <name>Household_is_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_Counter</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SET_ProgEng_Household</targetReference>
+            </connector>
+            <label>Household is &gt; 1</label>
+        </rules>
+        <rules>
+            <name>Household_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_Counter</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CREATE_ProgramEngagememt</targetReference>
+            </connector>
+            <label>Household = 1</label>
+        </rules>
+    </decisions>
     <description>Screen Flow to support creating a Household of Contacts and enrolling them in the Refugees Program (PMM).</description>
     <dynamicChoiceSets>
         <name>var_picklist_RelationshipType</name>
@@ -250,6 +375,11 @@
         <picklistField>npe4__Type__c</picklistField>
         <picklistObject>npe4__Relationship__c</picklistObject>
     </dynamicChoiceSets>
+    <formulas>
+        <name>var_Today</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
     <interviewLabel>SFL_Refugees_HouseholdEnrollment {!$Flow.CurrentDateTime}</interviewLabel>
     <label>SFL_Refugees_HouseholdEnrollment</label>
     <processMetadataValues>
@@ -274,20 +404,23 @@
     <recordCreates>
         <name>CREATE_HHAccount</name>
         <label>CREATE HHAccount</label>
-        <locationX>710</locationX>
-        <locationY>398</locationY>
+        <locationX>1062</locationX>
+        <locationY>518</locationY>
         <connector>
             <targetReference>SET_PA_Contact</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
         <inputReference>var_sObj_HHAccount</inputReference>
     </recordCreates>
     <recordCreates>
         <name>CREATE_HHContact</name>
         <label>CREATE HHContact</label>
         <locationX>50</locationX>
-        <locationY>1478</locationY>
+        <locationY>1598</locationY>
         <connector>
-            <targetReference>SET_RelationshipToPA</targetReference>
+            <targetReference>SET_AddToCounter</targetReference>
         </connector>
         <faultConnector>
             <targetReference>S06_FaultScreen</targetReference>
@@ -297,8 +430,8 @@
     <recordCreates>
         <name>CREATE_PAContact</name>
         <label>CREATE PA Contact</label>
-        <locationX>710</locationX>
-        <locationY>638</locationY>
+        <locationX>1062</locationX>
+        <locationY>758</locationY>
         <connector>
             <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
         </connector>
@@ -308,10 +441,23 @@
         <inputReference>var_sObj_PAContact</inputReference>
     </recordCreates>
     <recordCreates>
+        <name>CREATE_ProgramEngagememt</name>
+        <label>Create Program Engagememt</label>
+        <locationX>1326</locationX>
+        <locationY>1934</locationY>
+        <connector>
+            <targetReference>Assign_ProgEng_ID</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputReference>var_sObj_ProgramEngagement</inputReference>
+    </recordCreates>
+    <recordCreates>
         <name>CREATE_RelationshipToPA</name>
         <label>CREATE RelationshipToPA</label>
         <locationX>50</locationX>
-        <locationY>1718</locationY>
+        <locationY>1958</locationY>
         <connector>
             <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
         </connector>
@@ -324,10 +470,10 @@
         <name>GET_Household_Members</name>
         <label>GET Household Members</label>
         <locationX>50</locationX>
-        <locationY>1118</locationY>
+        <locationY>1238</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>S03_HouseholdMember</targetReference>
+            <targetReference>S04_HouseholdMember</targetReference>
         </connector>
         <faultConnector>
             <targetReference>S06_FaultScreen</targetReference>
@@ -349,8 +495,8 @@
     <recordLookups>
         <name>GET_Household_Members_Final</name>
         <label>GET Household Members Final</label>
-        <locationX>1106</locationX>
-        <locationY>998</locationY>
+        <locationX>1326</locationX>
+        <locationY>1118</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>GET_RelationshipsToPA</targetReference>
@@ -360,7 +506,7 @@
             <field>AccountId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>GET_PAContact.Account.Id</elementReference>
+                <elementReference>var_sObj_HHAccount.Id</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -373,7 +519,7 @@
         <name>GET_PAContact</name>
         <label>GET_PAContact</label>
         <locationX>50</locationX>
-        <locationY>998</locationY>
+        <locationY>1118</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>GET_Household_Members</targetReference>
@@ -393,8 +539,8 @@
     <recordLookups>
         <name>GET_RelationshipsToPA</name>
         <label>GET RelationshipsToPA</label>
-        <locationX>1106</locationX>
-        <locationY>1118</locationY>
+        <locationX>1326</locationX>
+        <locationY>1238</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>S05_Confirmation_Screen_0</targetReference>
@@ -414,10 +560,90 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
+        <name>S01_Program_Selection</name>
+        <label>S01_Program Selection</label>
+        <locationX>1062</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>S02_PrincipalApplicant</targetReference>
+        </connector>
+        <fields>
+            <name>varT_WelcomeMessage</name>
+            <fieldText>&lt;p&gt;&lt;i style=&quot;color: rgb(0, 0, 0);&quot;&gt;Welcome to the Family Program Enrolment form! &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;i style=&quot;color: rgb(0, 0, 0);&quot;&gt;Please select a Program:&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>var_ProgramLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>pmdm__Program__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Program Name</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>var_CohortSelect</name>
+            <fieldText>&lt;p&gt;&lt;i&gt;Please select a Program Cohort (optional):&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>var_ProgramCohortLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramCohort__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Program Cohort</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>S02_PrincipalApplicant</name>
         <label>S02_PrincipalApplicant</label>
-        <locationX>710</locationX>
-        <locationY>158</locationY>
+        <locationX>1062</locationX>
+        <locationY>278</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -587,9 +813,9 @@
     <screens>
         <description>As if the user wants to add additional members.</description>
         <name>S03_AddAdditionalHouseholdMembers</name>
-        <label>Additional Household Members?</label>
-        <locationX>710</locationX>
-        <locationY>758</locationY>
+        <label>S03_Additional Household Members?</label>
+        <locationX>1062</locationX>
+        <locationY>878</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -609,10 +835,10 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>S03_HouseholdMember</name>
-        <label>S03_HouseholdMember</label>
+        <name>S04_HouseholdMember</name>
+        <label>S04_HouseholdMember</label>
         <locationX>50</locationX>
-        <locationY>1238</locationY>
+        <locationY>1358</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -737,10 +963,10 @@
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>S03_HouseholdMember_Section1</name>
+            <name>S04_HouseholdMember_Section1</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>S03_HouseholdMember_Section1_Column1</name>
+                <name>S04_HouseholdMember_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>var_HHContactName</name>
@@ -770,7 +996,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>S03_HouseholdMember_Section1_Column2</name>
+                <name>S04_HouseholdMember_Section1_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>var_HHContact_Birthday</name>
@@ -790,10 +1016,10 @@
             <isRequired>false</isRequired>
         </fields>
         <fields>
-            <name>S03_HouseholdMember_Section2</name>
+            <name>S04_HouseholdMember_Section2</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>S03_HouseholdMember_Section2_Column1</name>
+                <name>S04_HouseholdMember_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>var_RelationshipToPA</name>
@@ -843,7 +1069,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>S03_HouseholdMember_Section2_Column2</name>
+                <name>S04_HouseholdMember_Section2_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -877,12 +1103,20 @@
     </screens>
     <screens>
         <name>S05_Confirmation_Screen_0</name>
-        <label>Review Household</label>
-        <locationX>1106</locationX>
-        <locationY>1238</locationY>
+        <label>S05_Review Household</label>
+        <locationX>1326</locationX>
+        <locationY>1358</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
+        <connector>
+            <targetReference>SET_ProgEng</targetReference>
+        </connector>
+        <fields>
+            <name>varT_ConfirmationText</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Please review and correct any of the below fields before final confirmation.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <fields>
             <name>var_table_HHMembersFinal</name>
             <dataTypeMappings>
@@ -1001,7 +1235,7 @@
             <inputParameters>
                 <name>tableLabel</name>
                 <value>
-                    <stringValue>Household Relationships</stringValue>
+                    <stringValue>Relationships to the Principle Applicant</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1048,6 +1282,33 @@
             </inputParameters>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>var_Counter</leftValueReference>
+                    <operator>GreaterThan</operator>
+                    <rightValue>
+                        <numberValue>1.0</numberValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Congratulations - you&apos;ve enrolled a new family in the Refugees Program!</description>
+        <name>S06_CongratuationsScreen</name>
+        <label>S06_Final Confirmation Screen</label>
+        <locationX>1326</locationX>
+        <locationY>2174</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>varT_CongratulationsText</name>
+            <fieldText>&lt;p&gt;Congratulations - you&apos;ve enrolled a new family in the Refugees Program!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Principal Applicant: &lt;b&gt;{!var_sObj_PAContact.FirstName} &lt;/b&gt;&lt;b style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;{!var_sObj_PAContact.LastName}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Household: &lt;b&gt;{!var_sObj_HHAccount.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Number of Household Members: &lt;b&gt;{!var_Counter}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/{!var_NewProgEngId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Click here to visit their Program Engagement record!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!var_NewProgEngId}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -1055,8 +1316,8 @@
     <screens>
         <name>S06_FaultScreen</name>
         <label>Fault Screen</label>
-        <locationX>1370</locationX>
-        <locationY>998</locationY>
+        <locationX>2074</locationX>
+        <locationY>1118</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1069,18 +1330,37 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>584</locationX>
+        <locationX>936</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>S02_PrincipalApplicant</targetReference>
+            <targetReference>S01_Program_Selection</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <textTemplates>
         <name>varT_template_HHAccountName</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>{!var_PAName.lastName} ({!var_PAName.firstName}) Household</text>
     </textTemplates>
+    <variables>
+        <name>var_Counter</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>1.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Saves the new Program Engagement ID, for creation of the hyperlink in the final Success Screen</description>
+        <name>var_NewProgEngId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>var_sObj_HHAccount</name>
         <dataType>SObject</dataType>
