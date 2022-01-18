@@ -4,6 +4,7 @@
     <permissionSets>Refugees_Program</permissionSets>
     <permissionSets>USF_Flow_Screen_Component_Datatable</permissionSets>
     <permissionSets>pmdm__PMDM_Deliver</permissionSets>
+    <permissionSets>pmdm__PMDM_Manage</permissionSets>
     <permissionSets>pmdm__PMDM_View</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

@@ -5,7 +5,7 @@
         <name>Assign_ProgEng_ID</name>
         <label>Assign ProgEng ID</label>
         <locationX>1326</locationX>
-        <locationY>2054</locationY>
+        <locationY>2174</locationY>
         <assignmentItems>
             <assignToReference>var_NewProgEngId</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +21,7 @@
         <name>SET_AddToCounter</name>
         <label>SET_AddToCounter</label>
         <locationX>50</locationX>
-        <locationY>1718</locationY>
+        <locationY>1838</locationY>
         <assignmentItems>
             <assignToReference>var_Counter</assignToReference>
             <operator>Add</operator>
@@ -37,7 +37,7 @@
         <name>SET_HHAccount_Name</name>
         <label>SET HHAccount Name</label>
         <locationX>1062</locationX>
-        <locationY>398</locationY>
+        <locationY>518</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_HHAccount.Name</assignToReference>
             <operator>Assign</operator>
@@ -53,7 +53,7 @@
         <name>SET_HHContact</name>
         <label>SET HHContact</label>
         <locationX>50</locationX>
-        <locationY>1478</locationY>
+        <locationY>1598</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_HHContact.FirstName</assignToReference>
             <operator>Assign</operator>
@@ -89,6 +89,27 @@
                 <stringValue></stringValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.HomePhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHMember_Phone.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHMember_Email.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_HHContact.UCI__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_HHMember_UCI</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>CREATE_HHContact</targetReference>
         </connector>
@@ -98,7 +119,7 @@
         <name>SET_PA_Contact</name>
         <label>SET_PA_Contact</label>
         <locationX>1062</locationX>
-        <locationY>638</locationY>
+        <locationY>758</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_PAContact.FirstName</assignToReference>
             <operator>Assign</operator>
@@ -184,7 +205,7 @@
         <name>SET_ProgEng</name>
         <label>SET_ProgEng</label>
         <locationX>1326</locationX>
-        <locationY>1478</locationY>
+        <locationY>1598</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.pmdm__Contact__c</assignToReference>
             <operator>Assign</operator>
@@ -213,6 +234,34 @@
                 <elementReference>var_Today</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.pmdm__Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Client</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.Refuge_CoSponsor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_CoSponsorLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.Visa_Office__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_VisaOfficeLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.Constituent_Group__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_ConstituentGroupLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>CHECK_HHGreaterThan1</targetReference>
         </connector>
@@ -221,7 +270,7 @@
         <name>SET_ProgEng_Household</name>
         <label>SET_ProgEng_Household</label>
         <locationX>1106</locationX>
-        <locationY>1718</locationY>
+        <locationY>1838</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.pmdm__Account__c</assignToReference>
             <operator>Assign</operator>
@@ -237,7 +286,7 @@
         <name>SET_RelationshipToPA</name>
         <label>SET RelationshipToPA</label>
         <locationX>50</locationX>
-        <locationY>1838</locationY>
+        <locationY>1958</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_RelationshipToPA.npe4__Contact__c</assignToReference>
             <operator>Assign</operator>
@@ -290,7 +339,7 @@
         <name>CHECK_AddHHMembers</name>
         <label>CHECK_AddHHMembers</label>
         <locationX>1062</locationX>
-        <locationY>998</locationY>
+        <locationY>1118</locationY>
         <defaultConnector>
             <targetReference>S06_FaultScreen</targetReference>
         </defaultConnector>
@@ -330,7 +379,7 @@
         <name>CHECK_HHGreaterThan1</name>
         <label>CHECK_HH Greater Than 1</label>
         <locationX>1326</locationX>
-        <locationY>1598</locationY>
+        <locationY>1718</locationY>
         <defaultConnector>
             <targetReference>S06_FaultScreen</targetReference>
         </defaultConnector>
@@ -405,7 +454,7 @@
         <name>CREATE_HHAccount</name>
         <label>CREATE HHAccount</label>
         <locationX>1062</locationX>
-        <locationY>518</locationY>
+        <locationY>638</locationY>
         <connector>
             <targetReference>SET_PA_Contact</targetReference>
         </connector>
@@ -418,7 +467,7 @@
         <name>CREATE_HHContact</name>
         <label>CREATE HHContact</label>
         <locationX>50</locationX>
-        <locationY>1598</locationY>
+        <locationY>1718</locationY>
         <connector>
             <targetReference>SET_AddToCounter</targetReference>
         </connector>
@@ -431,7 +480,7 @@
         <name>CREATE_PAContact</name>
         <label>CREATE PA Contact</label>
         <locationX>1062</locationX>
-        <locationY>758</locationY>
+        <locationY>878</locationY>
         <connector>
             <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
         </connector>
@@ -444,7 +493,7 @@
         <name>CREATE_ProgramEngagememt</name>
         <label>Create Program Engagememt</label>
         <locationX>1326</locationX>
-        <locationY>1934</locationY>
+        <locationY>2054</locationY>
         <connector>
             <targetReference>Assign_ProgEng_ID</targetReference>
         </connector>
@@ -457,7 +506,7 @@
         <name>CREATE_RelationshipToPA</name>
         <label>CREATE RelationshipToPA</label>
         <locationX>50</locationX>
-        <locationY>1958</locationY>
+        <locationY>2078</locationY>
         <connector>
             <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
         </connector>
@@ -470,7 +519,7 @@
         <name>GET_Household_Members</name>
         <label>GET Household Members</label>
         <locationX>50</locationX>
-        <locationY>1238</locationY>
+        <locationY>1358</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>S04_HouseholdMember</targetReference>
@@ -496,7 +545,7 @@
         <name>GET_Household_Members_Final</name>
         <label>GET Household Members Final</label>
         <locationX>1326</locationX>
-        <locationY>1118</locationY>
+        <locationY>1238</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>GET_RelationshipsToPA</targetReference>
@@ -519,7 +568,7 @@
         <name>GET_PAContact</name>
         <label>GET_PAContact</label>
         <locationX>50</locationX>
-        <locationY>1118</locationY>
+        <locationY>1238</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>GET_Household_Members</targetReference>
@@ -540,7 +589,7 @@
         <name>GET_RelationshipsToPA</name>
         <label>GET RelationshipsToPA</label>
         <locationX>1326</locationX>
-        <locationY>1238</locationY>
+        <locationY>1358</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>S05_Confirmation_Screen_0</targetReference>
@@ -568,11 +617,11 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>S02_PrincipalApplicant</targetReference>
+            <targetReference>S07_Refugee_Application</targetReference>
         </connector>
         <fields>
             <name>varT_WelcomeMessage</name>
-            <fieldText>&lt;p&gt;&lt;i style=&quot;color: rgb(0, 0, 0);&quot;&gt;Welcome to the Family Program Enrolment form! &lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;i style=&quot;color: rgb(0, 0, 0);&quot;&gt;Please select a Program:&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;Welcome to the Family Program Enrolment form! &lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Please select a Program:&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -608,7 +657,7 @@
         </fields>
         <fields>
             <name>var_CohortSelect</name>
-            <fieldText>&lt;p&gt;&lt;i&gt;Please select a Program Cohort (optional):&lt;/i&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Please select a Program Cohort (optional):&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -643,7 +692,7 @@
         <name>S02_PrincipalApplicant</name>
         <label>S02_PrincipalApplicant</label>
         <locationX>1062</locationX>
-        <locationY>278</locationY>
+        <locationY>398</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -815,7 +864,7 @@
         <name>S03_AddAdditionalHouseholdMembers</name>
         <label>S03_Additional Household Members?</label>
         <locationX>1062</locationX>
-        <locationY>878</locationY>
+        <locationY>998</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -838,7 +887,7 @@
         <name>S04_HouseholdMember</name>
         <label>S04_HouseholdMember</label>
         <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationY>1478</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -939,7 +988,7 @@
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,Birthdate,Email,MailingCountry</stringValue>
+                    <stringValue>Name,UCI__c,Birthdate,Email,MobilePhone,HomePhone,MailingCountry</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -951,7 +1000,7 @@
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>Name:188, Birthdate:188, Email:188, MailingCountry:188</stringValue>
+                    <stringValue>Name:135, UCI__c:115, Birthdate:125, Email:175, MobilePhone:120, HomePhone:115, MailingCountry:190</stringValue>
                 </value>
             </inputParameters>
             <isRequired>true</isRequired>
@@ -1005,6 +1054,13 @@
                     <fieldType>InputField</fieldType>
                     <isRequired>false</isRequired>
                 </fields>
+                <fields>
+                    <name>var_HHMember_UCI</name>
+                    <dataType>String</dataType>
+                    <fieldText>UCI</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                </fields>
                 <inputParameters>
                     <name>width</name>
                     <value>
@@ -1022,13 +1078,46 @@
                 <name>S04_HouseholdMember_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>var_RelationshipToPA</name>
-                    <choiceReferences>var_picklist_RelationshipType</choiceReferences>
-                    <dataType>String</dataType>
-                    <fieldText>Relationship to Principal Applicant</fieldText>
-                    <fieldType>DropdownBox</fieldType>
+                    <name>var_HHMember_Email</name>
+                    <extensionName>flowruntime:email</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
                     <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>S04_HouseholdMember_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>var_HHMember_Phone</name>
+                    <extensionName>flowruntime:phone</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>S04_HouseholdMember_Section3</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>S04_HouseholdMember_Section3_Column1</name>
+                <fieldType>Region</fieldType>
                 <fields>
                     <name>var_ContactLivesWithPA</name>
                     <extensionName>flowruntime:toggle</extensionName>
@@ -1043,12 +1132,6 @@
                         <name>messageToggleActive</name>
                         <value>
                             <stringValue>Yes</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>disabled</name>
-                        <value>
-                            <booleanValue>false</booleanValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
@@ -1069,7 +1152,7 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>S04_HouseholdMember_Section2_Column2</name>
+                <name>S04_HouseholdMember_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <inputParameters>
                     <name>width</name>
@@ -1098,6 +1181,14 @@
                 </conditions>
             </visibilityRule>
         </fields>
+        <fields>
+            <name>var_RelationshipToPA</name>
+            <choiceReferences>var_picklist_RelationshipType</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Relationship to Principal Applicant</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -1105,7 +1196,7 @@
         <name>S05_Confirmation_Screen_0</name>
         <label>S05_Review Household</label>
         <locationX>1326</locationX>
-        <locationY>1358</locationY>
+        <locationY>1478</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1114,7 +1205,7 @@
         </connector>
         <fields>
             <name>varT_ConfirmationText</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Please review and correct any of the below fields before final confirmation.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Please review before final confirmation:&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -1140,7 +1231,7 @@
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>FirstName,LastName,MailingCountry,Email,MobilePhone,UCI__c</stringValue>
+                    <stringValue>Name,UCI__c,Birthdate,Email,MobilePhone,HomePhone,MailingCountry</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1152,7 +1243,7 @@
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>FirstName:155, LastName:155, MailingCountry:155, Email:155, MobilePhone:155, UCI__c:155</stringValue>
+                    <stringValue>Name:182, UCI__c:161, Birthdate:128, Email:286, MobilePhone:159, HomePhone:171, MailingCountry:212</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1235,7 +1326,7 @@
             <inputParameters>
                 <name>tableLabel</name>
                 <value>
-                    <stringValue>Relationships to the Principle Applicant</stringValue>
+                    <stringValue>Household Relationship Records</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1253,7 +1344,7 @@
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,npe4__RelatedContact__c,npe4__Type__c,npe4__Relationship_Explanation__c</stringValue>
+                    <stringValue>npe4__RelatedContact__c,npe4__Relationship_Explanation__c,npe4__Type__c,Name</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1265,7 +1356,7 @@
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>Name:190, npe4__RelatedContact__c:190, npe4__Type__c:172, npe4__Relationship_Explanation__c:287</stringValue>
+                    <stringValue>npe4__RelatedContact__c:232, npe4__Relationship_Explanation__c:331, npe4__Type__c:165, Name:190</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1301,7 +1392,7 @@
         <name>S06_CongratuationsScreen</name>
         <label>S06_Final Confirmation Screen</label>
         <locationX>1326</locationX>
-        <locationY>2174</locationY>
+        <locationY>2294</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1317,7 +1408,7 @@
         <name>S06_FaultScreen</name>
         <label>Fault Screen</label>
         <locationX>2074</locationX>
-        <locationY>1118</locationY>
+        <locationY>1238</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1325,6 +1416,100 @@
             <name>varT_ErrorMessage</name>
             <fieldText>&lt;p&gt;Error: {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>S07_Refugee_Application</name>
+        <label>S07_Refugee Application</label>
+        <locationX>1062</locationX>
+        <locationY>278</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>S02_PrincipalApplicant</targetReference>
+        </connector>
+        <fields>
+            <name>varT_PreliminaryInformation</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;Preliminary Application Information&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>var_ConstituentGroupLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Constituent_Group__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Constituent Group</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>var_CoSponsorLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Refuge_CoSponsor__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Co-Sponsor (Primary)</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>var_VisaOfficeLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Visa_Office__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>International Visa Office </stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
