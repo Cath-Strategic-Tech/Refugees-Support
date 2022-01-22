@@ -4,8 +4,8 @@
     <assignments>
         <name>Assign_ProgEng_ID</name>
         <label>Assign ProgEng ID</label>
-        <locationX>1326</locationX>
-        <locationY>2054</locationY>
+        <locationX>1766</locationX>
+        <locationY>2870</locationY>
         <assignmentItems>
             <assignToReference>var_NewProgEngId</assignToReference>
             <operator>Assign</operator>
@@ -36,7 +36,7 @@
     <assignments>
         <name>SET_HHAccount_Name</name>
         <label>SET HHAccount Name</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_HHAccount.Name</assignToReference>
@@ -118,7 +118,7 @@
         <description>Sets the PA Contact variable based on Screen inputs.</description>
         <name>SET_PA_Contact</name>
         <label>SET_PA_Contact</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>638</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_PAContact.FirstName</assignToReference>
@@ -204,8 +204,8 @@
     <assignments>
         <name>SET_ProgEng</name>
         <label>SET_ProgEng</label>
-        <locationX>1326</locationX>
-        <locationY>1478</locationY>
+        <locationX>1766</locationX>
+        <locationY>2294</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.pmdm__Contact__c</assignToReference>
             <operator>Assign</operator>
@@ -245,42 +245,28 @@
             <assignToReference>var_sObj_ProgramEngagement.Visa_Office__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>VisaOffice.recordId</elementReference>
+                <elementReference>VisaOffice_0.recordId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.Constituent_Group__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>ConstituentGroupLookup.recordId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_sObj_ProgramEngagement.Refuge_CoSponsor__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>CoSponsorA.recordId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_sObj_ProgramEngagement.Refuge_CoSponsor_B__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>CoSponsorB.recordId</elementReference>
+                <elementReference>ConstituentGroupLookup_0.recordId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.Start_Up_Costs__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Start_Up_Costs</elementReference>
+                <elementReference>Start_Up_Costs_0</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.Monthly_RAP_Rate__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Monthly_RAP_Rates</elementReference>
+                <elementReference>Monthly_RAP_Rates_0</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -288,10 +274,51 @@
         </connector>
     </assignments>
     <assignments>
+        <description>SETS the contact record found in the Lookup as the Co-Sponsor on the Program Engagement record.</description>
+        <name>SET_ProgEng_CoSponsor_Lookup</name>
+        <label>SET_ProgEng_CoSponsor_Lookup</label>
+        <locationX>1898</locationX>
+        <locationY>1838</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_CoSponsor.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_CoSponsorLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.Refuge_CoSponsor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_CoSponsorLookup.recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>S05_ProgramEngagement_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the new contact record as the value in the CoSponsor A field on the ProgEng sObj.</description>
+        <name>SET_ProgEng_CoSponsor_NewContact</name>
+        <label>SET_ProgEng_CoSponsor_NewContact</label>
+        <locationX>1106</locationX>
+        <locationY>1958</locationY>
+        <assignmentItems>
+            <assignToReference>var_sObj_ProgramEngagement.Refuge_CoSponsor__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_sObj_CoSponsor.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>S05_ProgramEngagement_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>SET_ProgEng_Household</name>
         <label>SET_ProgEng_Household</label>
-        <locationX>1106</locationX>
-        <locationY>1718</locationY>
+        <locationX>1546</locationX>
+        <locationY>2534</locationY>
         <assignmentItems>
             <assignToReference>var_sObj_ProgramEngagement.pmdm__Account__c</assignToReference>
             <operator>Assign</operator>
@@ -359,7 +386,7 @@
     <decisions>
         <name>CHECK_AddHHMembers</name>
         <label>CHECK_AddHHMembers</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>998</locationY>
         <defaultConnector>
             <targetReference>S06_FaultScreen</targetReference>
@@ -397,10 +424,51 @@
         </rules>
     </decisions>
     <decisions>
+        <description>Checks if the user click &apos;yes&apos; to create a new record for the Co-Sponsor, and if so, creates new record based on input then assigns to ProgEng, and if not, assigns Contact.ID in Lookup to ProgEng.</description>
+        <name>CHECK_CreatedNewCosponsorRecord</name>
+        <label>CHECK_CreatedNewCosponsorRecord?</label>
+        <locationX>1766</locationX>
+        <locationY>1598</locationY>
+        <defaultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>ERROR</defaultConnectorLabel>
+        <rules>
+            <name>CHECK_CreatedNewCosponsorRecord_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varC_CreateNewCoSponsorContact</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CREATE_CoSponsorContact</targetReference>
+            </connector>
+            <label>Created New Record</label>
+        </rules>
+        <rules>
+            <name>CHECK_CreatedNewCosponsorRecord_No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varC_CreateNewCoSponsorContact</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CREATE_Co_Sponsor_Relationship_0</targetReference>
+            </connector>
+            <label>Found Record, Didn&apos;t Create</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>CHECK_HHGreaterThan1</name>
         <label>CHECK_HH Greater Than 1</label>
-        <locationX>1326</locationX>
-        <locationY>1598</locationY>
+        <locationX>1766</locationX>
+        <locationY>2414</locationY>
         <defaultConnector>
             <targetReference>S06_FaultScreen</targetReference>
         </defaultConnector>
@@ -472,9 +540,120 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
+        <description>Creates relationship record between Co-Sponsor and Principal Applicant.</description>
+        <name>CREATE_Co_Sponsor_Relationship</name>
+        <label>CREATE Co-Sponsor Relationship</label>
+        <locationX>1106</locationX>
+        <locationY>1838</locationY>
+        <connector>
+            <targetReference>SET_ProgEng_CoSponsor_NewContact</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>npe4__Contact__c</field>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__RelatedContact__c</field>
+            <value>
+                <elementReference>var_sObj_CoSponsor.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__Status__c</field>
+            <value>
+                <stringValue>Current</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__Type__c</field>
+            <value>
+                <elementReference>var_CoSponsorRelationshipToPA</elementReference>
+            </value>
+        </inputAssignments>
+        <object>npe4__Relationship__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Creates relationship record between Co-Sponsor and Principal Applicant.</description>
+        <name>CREATE_Co_Sponsor_Relationship_0</name>
+        <label>CREATE Co-Sponsor Relationship</label>
+        <locationX>1898</locationX>
+        <locationY>1718</locationY>
+        <connector>
+            <targetReference>SET_ProgEng_CoSponsor_Lookup</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>npe4__Contact__c</field>
+            <value>
+                <elementReference>var_sObj_PAContact.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__RelatedContact__c</field>
+            <value>
+                <elementReference>var_CoSponsorLookup.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__Status__c</field>
+            <value>
+                <stringValue>Current</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe4__Type__c</field>
+            <value>
+                <elementReference>var_RelationshipToPA</elementReference>
+            </value>
+        </inputAssignments>
+        <object>npe4__Relationship__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Creates a new Contact record for the CoSponsor</description>
+        <name>CREATE_CoSponsorContact</name>
+        <label>CREATE Co-Sponsor Contact</label>
+        <locationX>1106</locationX>
+        <locationY>1718</locationY>
+        <assignRecordIdToReference>var_sObj_CoSponsor.Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>CREATE_Co_Sponsor_Relationship</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>S06_FaultScreen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>var_CoSponsorEmail.value</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>var_CoSponsorName.firstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>var_CoSponsorName.lastName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordCreates>
+    <recordCreates>
         <name>CREATE_HHAccount</name>
         <label>CREATE HHAccount</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>518</locationY>
         <connector>
             <targetReference>SET_PA_Contact</targetReference>
@@ -500,7 +679,7 @@
     <recordCreates>
         <name>CREATE_PAContact</name>
         <label>CREATE PA Contact</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>758</locationY>
         <connector>
             <targetReference>S03_AddAdditionalHouseholdMembers</targetReference>
@@ -513,8 +692,8 @@
     <recordCreates>
         <name>CREATE_ProgramEngagememt</name>
         <label>Create Program Engagememt</label>
-        <locationX>1326</locationX>
-        <locationY>1934</locationY>
+        <locationX>1766</locationX>
+        <locationY>2750</locationY>
         <connector>
             <targetReference>Assign_ProgEng_ID</targetReference>
         </connector>
@@ -565,7 +744,7 @@
     <recordLookups>
         <name>GET_Household_Members_Final</name>
         <label>GET Household Members Final</label>
-        <locationX>1326</locationX>
+        <locationX>1766</locationX>
         <locationY>1118</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -609,7 +788,7 @@
     <recordLookups>
         <name>GET_RelationshipsToPA</name>
         <label>GET RelationshipsToPA</label>
-        <locationX>1326</locationX>
+        <locationX>1766</locationX>
         <locationY>1238</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -632,7 +811,7 @@
     <screens>
         <name>S01_Program_Selection</name>
         <label>S01_Program Selection</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>158</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -712,7 +891,7 @@
     <screens>
         <name>S02_PrincipalApplicant</name>
         <label>S02_PrincipalApplicant</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>278</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -873,7 +1052,7 @@
         <description>As if the user wants to add additional members.</description>
         <name>S03_AddAdditionalHouseholdMembers</name>
         <label>S03_Additional Household Members?</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>878</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -1145,14 +1324,19 @@
         <description>Final major screen for entering Refugee Application information proper (to be saved on the Program Engagement record).</description>
         <name>S05_ProgramEngagement</name>
         <label>S05_ProgramEngagement</label>
-        <locationX>1326</locationX>
+        <locationX>1766</locationX>
         <locationY>1358</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>SET_ProgEng</targetReference>
+            <targetReference>S08_CoSponsor</targetReference>
         </connector>
+        <fields>
+            <name>varT_ReviewHousehold</name>
+            <fieldText>&lt;p&gt;Review the Household Members&apos; information prior to proceeding.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
         <fields>
             <name>var_table_HHMembersFinal</name>
             <dataTypeMappings>
@@ -1176,7 +1360,7 @@
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,Birthdate,MobilePhone,MailingCountry</stringValue>
+                    <stringValue>FirstName,LastName,Birthdate,MobilePhone,Email,MailingCountry</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1227,6 +1411,12 @@
                     <elementReference>GET_Household_Members_Final</elementReference>
                 </value>
             </inputParameters>
+            <inputParameters>
+                <name>columnWidths</name>
+                <value>
+                    <stringValue>FirstName:148, LastName:148, Birthdate:148, MobilePhone:148, Email:148, MailingCountry:148</stringValue>
+                </value>
+            </inputParameters>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
@@ -1265,7 +1455,7 @@
             <inputParameters>
                 <name>tableLabel</name>
                 <value>
-                    <stringValue>Relationships</stringValue>
+                    <stringValue>Relationships to Principal Applicant</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1283,7 +1473,7 @@
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>npe4__Relationship_Explanation__c,Name</stringValue>
+                    <stringValue>npe4__RelatedContact__c,npe4__Type__c,npe4__Relationship_Explanation__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -1304,6 +1494,12 @@
                     <stringValue>CB_TRUE</stringValue>
                 </value>
             </inputParameters>
+            <inputParameters>
+                <name>columnWidths</name>
+                <value>
+                    <stringValue>npe4__RelatedContact__c:297, npe4__Type__c:297, npe4__Relationship_Explanation__c:297</stringValue>
+                </value>
+            </inputParameters>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
             <visibilityRule>
@@ -1317,13 +1513,23 @@
                 </conditions>
             </visibilityRule>
         </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Final major screen for entering Refugee Application information proper (to be saved on the Program Engagement record).</description>
+        <name>S05_ProgramEngagement_0</name>
+        <label>S05_ProgramEngagement</label>
+        <locationX>1766</locationX>
+        <locationY>2174</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>SET_ProgEng</targetReference>
+        </connector>
         <fields>
-            <name>varT_ProgEngAdditional</name>
-            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Refugees Sponsorship Information&lt;/b&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <fields>
-            <name>VisaOffice</name>
+            <name>VisaOffice_0</name>
             <extensionName>flowruntime:lookup</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
@@ -1348,7 +1554,7 @@
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
-            <name>ConstituentGroupLookup</name>
+            <name>ConstituentGroupLookup_0</name>
             <extensionName>flowruntime:lookup</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
@@ -1373,62 +1579,12 @@
             <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <fields>
-            <name>CoSponsorA</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <stringValue>Refuge_CoSponsor__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>label</name>
-                <value>
-                    <stringValue>Co-Sponsor A</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
-                </value>
-            </inputParameters>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>CoSponsorB</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>label</name>
-                <value>
-                    <stringValue>Co-Sponsor B</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <stringValue>Refuge_CoSponsor_B__c</stringValue>
-                </value>
-            </inputParameters>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>varT_FinancialSupport1</name>
+            <name>varT_FinancialSupport1_0</name>
             <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Financial Support&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Start_Up_Costs</name>
+            <name>Start_Up_Costs_0</name>
             <dataType>Currency</dataType>
             <fieldText>Start Up Costs</fieldText>
             <fieldType>InputField</fieldType>
@@ -1436,7 +1592,7 @@
             <scale>0</scale>
         </fields>
         <fields>
-            <name>Monthly_RAP_Rates</name>
+            <name>Monthly_RAP_Rates_0</name>
             <dataType>Currency</dataType>
             <fieldText>Monthly RAP Rates</fieldText>
             <fieldType>InputField</fieldType>
@@ -1450,14 +1606,14 @@
         <description>Congratulations - you&apos;ve enrolled a new family in the Refugees Program!</description>
         <name>S06_CongratuationsScreen</name>
         <label>S06_Final Confirmation Screen</label>
-        <locationX>1326</locationX>
-        <locationY>2174</locationY>
+        <locationX>1766</locationX>
+        <locationY>2990</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
             <name>varT_CongratulationsText</name>
-            <fieldText>&lt;p&gt;Congratulations - you&apos;ve enrolled a new family in the Refugees Program!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Principal Applicant: &lt;b&gt;{!var_sObj_PAContact.FirstName} &lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!var_sObj_PAContact.LastName}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Household: &lt;b&gt;{!var_sObj_HHAccount.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Number of Household Members: &lt;b&gt;{!var_Counter}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Constituent Group: &lt;b&gt;{!var_sObj_ProgramEngagement.Constituent_Group__r.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Co-Sponsor A:  &lt;b&gt;{!var_sObj_ProgramEngagement.Refuge_CoSponsor__r.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Co-Sponsor B: &lt;b&gt;{!var_sObj_ProgramEngagement.Refuge_CoSponsor_B__r.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/{!var_NewProgEngId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Click here to visit their Program Engagement record!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Congratulations - you&apos;ve enrolled a new family in the Refugees Program!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Principal Applicant: &lt;b&gt;{!var_sObj_PAContact.FirstName} &lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!var_sObj_PAContact.LastName}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Household: &lt;b&gt;{!var_sObj_HHAccount.Name}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Number of Household Members: &lt;b&gt;{!var_Counter}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/{!var_NewProgEngId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Click here to visit their Program Engagement record!&lt;/a&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -1466,8 +1622,8 @@
     <screens>
         <name>S06_FaultScreen</name>
         <label>Fault Screen</label>
-        <locationX>2074</locationX>
-        <locationY>1118</locationY>
+        <locationX>2690</locationX>
+        <locationY>2870</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -1479,8 +1635,136 @@
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
+    <screens>
+        <name>S08_CoSponsor</name>
+        <label>S08_CoSponsor</label>
+        <locationX>1766</locationX>
+        <locationY>1478</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CHECK_CreatedNewCosponsorRecord</targetReference>
+        </connector>
+        <fields>
+            <name>varT_CoSponsor</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Sponsorship&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>var_CoSponsorLookup</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Refuge_CoSponsor__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Co-Sponsor</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>pmdm__ProgramEngagement__c</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>varC_CreateNewCoSponsorContact</name>
+            <dataType>Boolean</dataType>
+            <fieldText>I need to create a new Co-Sponsor record.</fieldText>
+            <fieldType>InputField</fieldType>
+            <helpText>&lt;p&gt;If when searching for the Co-Sponsor&apos;s contact record you are unable to find it, check this box to create a new contact record for the Co-Sponsor.&lt;/p&gt;</helpText>
+            <isRequired>true</isRequired>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>var_CoSponsorLookup.recordId</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue></stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>var_CoSponsorName</name>
+            <extensionName>flowruntime:name</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>firstName</name>
+                <value>
+                    <elementReference>var_sObj_CoSponsor.FirstName</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>lastName</name>
+                <value>
+                    <elementReference>var_sObj_CoSponsor.LastName</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>disabled</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varC_CreateNewCoSponsorContact</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>var_CoSponsorEmail</name>
+            <extensionName>flowruntime:email</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Email</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varC_CreateNewCoSponsorContact</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>var_CoSponsorRelationshipToPA</name>
+            <choiceReferences>var_picklist_RelationshipType</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Relationship to Principal Applicant</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <start>
-        <locationX>936</locationX>
+        <locationX>1376</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>S01_Program_Selection</targetReference>
@@ -1510,6 +1794,14 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_sObj_CoSponsor</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
     </variables>
     <variables>
         <name>var_sObj_HHAccount</name>
