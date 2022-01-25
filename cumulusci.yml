@@ -7,6 +7,11 @@ project:
         api_version: '50.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/PMM'
+        - github: 'https://github.com/SalesforceFoundation/Relationships'
+        - version_id: 04t4W00000309DuQAI
+        - version_id: 04t5G0000047xO4QAI
+        - version_id: 04t5G000003rUaWQAU
+
     git:
         default_branch: ''
     source_format: sfdx
@@ -117,6 +122,7 @@ flows:
                 options:
                     api_names:
                         - Refugees_Program
+                        - USF_Flow_Screen_Component_Datatable
 
     install_prod:
         steps:
@@ -127,10 +133,10 @@ flows:
             3:
                 task: update_admin_profile_record_types
             4:    
-                task: assign_permission_sets
+                task: assign_permission_set_groups
                 options:
                     api_names:
-                        - Refugees_Program
+                        - Refugees_Program_Management
 
     dependencies:
         steps:

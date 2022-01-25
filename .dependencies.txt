@@ -1,0 +1,21 @@
+// this is just for documentation of the version ids, real dependencies are in th cumulusci.yml
+// the ORDER is important to list any dependent packages above depndendee packages
+
+// CMTD Enhanced Related List
+- version_id: 04t6F000000cgcYQAQ
+
+// FlowActionsBasePack
+- version_id: 04t4W0000034KcuQAE
+
+// FlowScreenComponentsBasePack
+- version_id: 04t5G0000047xO4QAI
+
+// CollectionActionsL
+- version_id: 04t5G000003rUfHQAU
+
+// SOQLBuildAndExecute
+- version_id: 04t5G000004PuWzQAK
+
+// AddQuotesToFields
+- version_id: 04t1K0000033MV1QAM
+

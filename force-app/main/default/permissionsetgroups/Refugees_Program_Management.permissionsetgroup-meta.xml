@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Refugees Program Management</label>
+    <permissionSets>Refugees_Program</permissionSets>
+    <permissionSets>USF_Flow_Screen_Component_Datatable</permissionSets>
+    <permissionSets>pmdm__PMDM_Deliver</permissionSets>
+    <permissionSets>pmdm__PMDM_Manage</permissionSets>
+    <permissionSets>pmdm__PMDM_View</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
