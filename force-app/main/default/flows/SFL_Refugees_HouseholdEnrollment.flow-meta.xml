@@ -821,7 +821,7 @@
         </connector>
         <fields>
             <name>varT_WelcomeMessage</name>
-            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Welcome to the Household Refugees Program Enrolment form! &lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Please select a Program:&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(0, 0, 0); font-size: 14px;&quot;&gt;Welcome to the Household Refugees Program Enrolment form!&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px;&quot;&gt; Begin by selecting the Refugees Program and, optionally, a Program Cohort:&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -837,7 +837,7 @@
             <inputParameters>
                 <name>label</name>
                 <value>
-                    <stringValue>Program Name</stringValue>
+                    <stringValue>Program</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -854,11 +854,6 @@
             </inputParameters>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
-        </fields>
-        <fields>
-            <name>var_CohortSelect</name>
-            <fieldText>&lt;p&gt;Please select a Program Cohort (optional):&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>var_ProgramCohortLookup</name>
@@ -1675,6 +1670,16 @@
             </inputParameters>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+            <visibilityRule>
+                <conditionLogic>and</conditionLogic>
+                <conditions>
+                    <leftValueReference>varC_CreateNewCoSponsorContact</leftValueReference>
+                    <operator>IsNull</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
         </fields>
         <fields>
             <name>varC_CreateNewCoSponsorContact</name>
