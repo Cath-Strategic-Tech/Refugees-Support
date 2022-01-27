@@ -1,17 +1,41 @@
 {
+    "namespace": "ref02",
+    "sourceApiVersion": "52.0",
     "packageDirectories": [
         {
-            "path": "force-app", 
-            "default": true
+            "path": "force-app",
+            "default": true,
+            "package": "Refugees Support (Unlocked)",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "definitionFile" : "orgs/release.json"
         }
     ],
-
-    "namespace": null,
-    "sourceApiVersion": "52.0",
-    "postInstallUrl": "https://github.com/Cath-Strategic-Tech/Refugees-Support/releases"
-
+    "dependencies": [
+        {
+            "package" : "Relationships@3.12.0.LATEST"           
+        },
+        {
+            "package": "PMM@1.29.0.LATEST"
+        },
+        {
+            "package": "FlowActionsBasePack@2.36.0.LATEST"
+        },
+        {
+            "package": "FlowScreenComponentsBasePack@2.7.5.LATEST"
+        },
+        {
+            "package": "Datatable@3.3.2.LATEST"
+        }
+     ],
+    "postInstallUrl": "https://github.com/Cath-Strategic-Tech/Refugees-Support/releases",
+    "packageAliases": {
+        "PMM": "04t6g000008C2xMAAS",
+        "Relationships": "04t2E000003sm94QAA",
+        "FlowActionsBasePack": "04t4W0000034KcuQAE",
+        "FlowScreenComponentsBasePack": "04t5G0000047xO4QAI",
+        "Datatable": "04t5G000003rUaWQAU",
+        "Refugees Support (Unlocked)": "0Ho1U000000TNSQSA4"
+    }
 }
-
-
-
 

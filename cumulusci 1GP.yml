@@ -2,8 +2,8 @@ minimum_cumulusci_version: '3.27.0'
 project:
     name: Refugees-Support
     package:
-        name: 'Refugees Support (Unlocked)'
-        namespace: 'ref02'
+        name: Refugees-Support
+        namespace: refugee01
         api_version: '50.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/PMM'
